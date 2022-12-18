@@ -1,0 +1,57 @@
+/* MOBILE FIRST */
+
+nav {
+  height: 10vh;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 15px;
+
+}
+
+#logo {
+  display: none;
+}
+
+#navigation {
+  display: none;
+}
+
+#burgerMenu {
+  height: 5vh;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.burgerLine {
+  height: 4px;
+  width: 40px;
+  background-color: black;  
+}
+/* MOBILE FIRST */
+
+/* DESKTOP */
+@media (min-width: 1250px)  {
+
+  nav {
+    justify-content: space-between;
+  }
+
+  #burgerMenu {
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #navigation{
+    display: block;
+  }
+}
+/*DESKTOP*/

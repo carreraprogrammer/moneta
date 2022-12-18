@@ -6,6 +6,7 @@
  import Shop from "./pages/Shop";
 import Navbar from './Components/Navbar'
 import Coffee from "./pages/Coffee";
+import './App.css'
 
 
 
