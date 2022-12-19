@@ -14,11 +14,11 @@
 /* RESET */
 
 :root {
-  --yellow: #f4c382;
+  --yellow-background: #f4c382;
 }
 
 #root {
   width: 100%;
   height: 400vh;
-  background-color: var(--yellow);
+  background-color: #f4c382
 }

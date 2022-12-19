@@ -1,4 +1,8 @@
 /* MOBILE FIRST */
+a {
+  text-decoration: none;
+  color: black;
+}
 
 nav {
   height: 10vh;
@@ -15,34 +19,84 @@ nav {
   display: none;
 }
 
-#navigation {
-  display: none;
-}
-
-#burgerMenu {
-  height: 5vh;
-  width: 50px;
+.burgerMenu {
+  height: 30px;
+  width: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-right: 5%;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('../resources/Images/mobileMenuBg.gif');
+  background-size: contain;
+  font-size: 3.5rem;
+  font-weight: bold;
+  z-index: 0;
+  transition: all 1s ease-in-out;
+}
+
+.navigation.navigationActive {
+  top: 0;
+}
+
+.navActive {
+  top: 0;
 }
 
 .burgerLine {
   height: 4px;
   width: 40px;
-  background-color: black;  
+  background-color: black;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
 }
+
+.burgerActive:nth-child(1){
+  transform: translateY(200%) rotate(45deg);
+}
+
+.burgerActive:nth-child(2){
+  display: none;
+}
+
+.burgerActive:nth-child(3){
+  transform: translateY(-200%) rotate(-45deg)
+}
+
 /* MOBILE FIRST */
 
+/* TABLETS */
+
+@media (min-width: 768px) {
+  .navigation {
+    background: url('../resources/Images/tabletMenuBg.gif');
+    background-size: fill;
+  }
+}
+
 /* DESKTOP */
-@media (min-width: 1250px)  {
+@media (min-width: 1025px)  {
 
   nav {
     justify-content: space-between;
+    background-size: 50%;
   }
 
-  #burgerMenu {
+  .burgerMenu {
     display: none;
   }
 
@@ -50,8 +104,18 @@ nav {
     display: block;
   }
 
-  #navigation{
-    display: block;
+  .navigation {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    height: 100%;
+    width: 300px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
   }
 }
 /*DESKTOP*/
