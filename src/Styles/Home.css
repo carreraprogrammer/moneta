@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,400;1,700&family=Lobster+Two:wght@400;700&display=swap');
+/* MOBILE FIRST */
+
+header {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+#homeGallery {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#galleryContainer {
+  height: 90%;
+  width: 90%;
+  border: 4px solid black;
+  display:flex;
+}
+
+#homeGalleryTwo {
+  background: url(../resources/Images/homeGalleryTwo.JPG);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-y: 50%;
+}
+
+/* TABLETS */
+
+@media (min-width: 768px) {
+  
+}
+
+/* DESKTOP */
+
+@media (min-width: 1025px) {
+   header {
+     height: 100vh;
+     font-size: 10rem;
+     border: 1px solid black;
+   }
+
+   #homeGallery {
+     height: 100vh;
+   }
+
+   #homeGalleryTwo {
+     width: 33.333%;
+     background-size: cover;
+     background-position: center;
+   }
+
+   #homeGalleryOne {
+     background: url('../resources/Images/homeGalleryOne.JPG');
+     width: 33.333%;
+     height: 100%;
+     background-size: cover;
+     background-position: center;
+   }
+
+   #homeGalleryThree {
+     background: url('../resources/Images/homeGalleryThree.JPG');
+     width: 33.333%;
+     height: 100%;
+     background-size: cover;
+   }
+}

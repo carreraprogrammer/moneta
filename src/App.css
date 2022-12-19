@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,400;1,700&family=Lobster+Two:wght@400;700&display=swap');
+
 /* RESET */
 
 *,
@@ -20,5 +22,9 @@
 #root {
   width: 100%;
   height: 400vh;
-  background-color: #f4c382
+  background-color: #f4c382;
+}
+
+h1 {
+  font-family: 'Amaranth', sans-serif;
 }

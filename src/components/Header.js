@@ -1,7 +1,9 @@
 
 const Header = () => {
   return(
-    <h1>This is the header</h1>
+    <header className='header'>
+      <h1 id='headerTitle'>MONETA</h1>
+    </header>
   )
 }
 
