@@ -18,6 +18,7 @@ nav {
   position: fixed;
   display: fixed;
   background-color: #f4c382;
+  z-index: 1100;
 }
 
 nav.navhidde {

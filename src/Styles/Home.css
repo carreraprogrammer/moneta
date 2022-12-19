@@ -45,11 +45,26 @@ header {
    header {
      height: 100vh;
      font-size: 10rem;
-     border: 1px solid black;
+     background: url(../resources/Images/parallaxThree.png);
+     background-size: cover;
+    }
+
+   #headerTitle {
+     position: sticky;
+     top: 0;
+     bottom: 100px;
+   }
+
+   #frontImage{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
    }
 
    #homeGallery {
      height: 100vh;
+     z-index: 1001;
    }
 
    #homeGalleryTwo {
