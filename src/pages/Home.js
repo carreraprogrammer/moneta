@@ -28,7 +28,10 @@ const Home = () => {
         </div>
         <Carousel />
         <div id='descriptionContainer'>
-          <p id='homeDescription'>Los cafés especiales se vuelven el feliz acompañante de ideas, aprendizajes y esperanzas. Somos cultura de cafés espciales</p>
+          <p id='homeDescription'>Los cafés especiales se vuelven el feliz acompañante de ideas, aprendizajes y esperanzas. Somos cultura de cafés especiales</p>
+        </div>
+        <div id='gifHomeContainer'>
+          <div id='gifHome'></div>
         </div>
       </div>
     )
