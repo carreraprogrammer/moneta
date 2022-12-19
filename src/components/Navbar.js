@@ -11,7 +11,6 @@ const Navbar = () => {
   
   return(
     <nav>
-      <NavLink to='/' id='logo'>LOGO</NavLink>
       <ul className='navigation'>
         <NavLink to='/' onClick={handleNavigation}>Principal</NavLink>
         <NavLink to='/Coffee' onClick={handleNavigation}>Café</NavLink>

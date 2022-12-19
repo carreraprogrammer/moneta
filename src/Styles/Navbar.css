@@ -7,7 +7,6 @@ a {
 nav {
   height: 10vh;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -96,6 +95,7 @@ nav {
   nav {
     justify-content: space-between;
     background-size: 50%;
+    padding: 0;
   }
 
   .burgerMenu {
@@ -111,13 +111,14 @@ nav {
     position: static;
     flex-direction: row;
     height: 100%;
-    width: 300px;
+    width: 100%;
     font-size: 1rem;
     background-color: transparent;
-    border: 1px solid black;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0px;
     align-items: center;
     background: none;
+    padding: 0 5%;
   }
 }
 /*DESKTOP*/
