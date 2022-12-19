@@ -13,10 +13,10 @@ const Navbar = () => {
     <nav>
       <NavLink to='/' id='logo'>LOGO</NavLink>
       <ul className='navigation'>
-        <NavLink to='/'>Principal</NavLink>
-        <NavLink to='/Coffee'>Café</NavLink>
-        <NavLink to='/Shop'>Tienda</NavLink>
-        <NavLink to='/About'>About</NavLink>
+        <NavLink to='/' onClick={handleNavigation}>Principal</NavLink>
+        <NavLink to='/Coffee' onClick={handleNavigation}>Café</NavLink>
+        <NavLink to='/Shop' onClick={handleNavigation}>Tienda</NavLink>
+        <NavLink to='/About' onClick={handleNavigation}>About</NavLink>
       </ul>
       <div className='burgerMenu' onClick={handleNavigation}>
         <span className='burgerLine'></span>    
