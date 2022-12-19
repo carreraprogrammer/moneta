@@ -3,7 +3,7 @@
  import Home from "./pages/Home";
  import About from "./pages/About";
  import Shop from "./pages/Shop";
-import Navbar from './Components/Navbar'
+import Navbar from './components/Navbar'
 import Coffee from "./pages/Coffee";
 import './App.css'
 
