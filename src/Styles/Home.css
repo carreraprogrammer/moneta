@@ -3,11 +3,16 @@
 
 header {
   width: 100%;
-  height: 30vh;
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+
+#headerTitle {
+  position: sticky;
+  top: 0;
 }
 
 #homeGallery {
@@ -16,6 +21,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#frontImage{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
 }
 
 #galleryContainer {
@@ -31,6 +44,23 @@ header {
   height: 100%;
   background-size: cover;
   background-position-y: 50%;
+}
+
+#carouselOne {
+  display: none;
+}
+
+#descriptionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+  
+#homeDescription {
+  width: 90%;
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 /* TABLETS */
@@ -52,19 +82,22 @@ header {
    #headerTitle {
      position: sticky;
      top: 0;
-     bottom: 100px;
+     bottom: 1000px;
+     height: 80vh;
+     display: flex;
+     align-items: center;
    }
 
    #frontImage{
     z-index: 1;
     width: 100%;
     height: 100%;
+    display: block;
     position: absolute;
    }
 
    #homeGallery {
      height: 100vh;
-     z-index: 1001;
    }
 
    #homeGalleryTwo {
@@ -87,4 +120,93 @@ header {
      height: 100%;
      background-size: cover;
    }
+
+   #carouselOne {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    transition: all 3s ease-in-out;
+  }
+  
+  #carouselOne::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  #carouselOne > :nth-child(1),
+  #carouselOne > :nth-child(2),
+  #carouselOne > :nth-child(3)
+  {
+    transition: 2s ease-in-out;
+  }
+  
+  
+  #carouselOne:hover > :nth-child(1),
+  #carouselOne:hover > :nth-child(3)
+  {
+    transform: translateX(-20%);
+    transition: 4s ease-in-out;
+  }
+  
+  #carouselOne:hover > :nth-child(2) {
+   transform: translateX(-80%);
+   transition: all 3.9s ease-in-out;
+  }
+  
+  .carouselOneImg {
+    flex-basis: 40%;
+    max-width: 80%;
+    height: auto;
+  }
+  
+  #carouselBtnContainer {
+    flex-basis: 20%;
+    min-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    transition: all 1s ease-in-out;
+  }
+  
+  #carouselBtnContainer:hover {
+    background: url('../resources/Images/btnBg.png');
+    background-size: contain;
+    transform: rotate(50deg);
+  }
+  
+  #carouselBtn {
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    margin-top: 3%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    background-color: #6d0022;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #carouselBtn:hover {
+    transform: rotate(5deg)
+  }
+  
+  #descriptionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #homeDescription {
+    width: 50%;
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
 }

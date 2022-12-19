@@ -8,6 +8,10 @@ a {
   font-size: 3rem;
 }
 
+a:hover {
+  color: #6d0022;
+}
+
 nav {
   height: 10vh;
   width: 100%;
@@ -17,7 +21,7 @@ nav {
   padding: 0 15px;
   position: fixed;
   display: fixed;
-  background-color: #f4c382;
+  background-color: #f7af74;
   z-index: 1100;
 }
 

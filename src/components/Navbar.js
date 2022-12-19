@@ -4,7 +4,7 @@ import $ from 'jquery'
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [prevScrollPos, setPrevScrollPos] = useState(1000);
 
 
   const handleNavigation = () => {
