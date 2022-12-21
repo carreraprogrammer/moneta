@@ -104,17 +104,58 @@ header {
   transform: translateX(0.5%)
 }
 
-#shopContainer {
+#shopSection {
   width: 100%;
-  height: 50vh;
+  height: 100vh;
+  font-size: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #ea984e;
 }
 
 #shop {
   width: 90%;
   height: 90%;
+}
+
+/* ANIMATION SHOP BUTTON */ 
+
+[data-aos="rotate-c"] {
+  transform: rotate(-90deg);
+  transition-property: transform;
+}
+
+[data-aos="rotate-c"].aos-animate {
+  transform: rotate(90deg);
+}
+
+#form {
+  height: 100vh;
+  width: 100%;
+}
+
+#shopButtonImage:hover {
+  animation: rotation 1s infinite linear;
+}
+
+#shopButtonImage {
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+}
+
+#shopBtnText {
+  z-index: 3;
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 /* TABLETS */
@@ -128,7 +169,7 @@ header {
 @media (min-width: 1025px) {
    header {
      height: 100vh;
-     font-size: 10rem;
+     font-size: 15rem;
      background: url(../resources/Images/parallaxThree.svg);
      background-size: cover;
     }
@@ -139,7 +180,7 @@ header {
      bottom: 1000px;
      height: 80vh;
      display: flex;
-     font-family: 'Amaranth', sans-serif;
+     font-family: 'Lobster Two', cursive;
      align-items: center;
      z-index: 1;
    }
@@ -275,13 +316,14 @@ header {
 
   #imageHomeContainer {
     width: 100%;
-    height: 100vh;
+    height: 130vh;
   }
   
   #imageHome {
     width: 80%;
     height: 90%;
     background-size: cover;
+    margin-bottom: 10%;
   }
 
   #shop {

@@ -7,10 +7,11 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import arrow from '../resources/Images/arrow.svg'
 import affogato from '../resources/Images/affogato.png'
+import shopBtn from '../resources/Images/shopHomeBtn.png'
 
 const Home = () => {
     useEffect(() => {
-        AOS.init({duration: 2000})
+        AOS.init({duration: 500})
     }, [])
   
     const startCarousel = () => {
@@ -46,6 +47,28 @@ const Home = () => {
           <div id='imageHome'>
             <img style={{width: '100%', height: '100%'}} src={affogato} />
           </div>
+        </div>
+        <div id='shopSection'>
+          <div id='shopImage'>
+          <h1 data-aos='fade-up'>SHOP</h1>
+            <button
+              style={{
+                width: '200px',
+                height: '200px',
+                border: '2px solid red',
+                background: 'transparent',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <p  id='shopBtnText'>TIENDA</p>
+              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c" data-aos-duration="3000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="top-top" data-aos-anchor='#shopSection' />
+          </button>
+          </div>
+        </div>
+        <div id='form'>
+            
         </div>
       </div>
     )

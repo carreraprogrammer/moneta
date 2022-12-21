@@ -17,19 +17,7 @@ const Header = () => {
           M
           </span>
           <span data-aos="fade-up" data-aos-duration="3000"> 
-          O
-          </span>
-          <span data-aos="fade-down" data-aos-duration="3000">
-          N
-          </span>
-          <span div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000">
-          E
-          </span>
-          <span data-aos="fade-down" data-aos-duration="3000">
-          T
-          </span>
-          <span data-aos="zoom-in-down" data-aos-duration="3000">
-          A
+          oneta
           </span></h1>
           <img id='frontImage' src={frontImage}/>
     </header>
