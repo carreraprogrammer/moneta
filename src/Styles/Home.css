@@ -87,7 +87,6 @@ header {
 #gifHome {
   width: 90%;
   height: 70%;
-  background: url(../resources/Images/gifHome.gif);
   background-size: cover;
 }
 
@@ -115,7 +114,7 @@ header {
 @media (min-width: 1025px) {
    header {
      height: 100vh;
-     font-size: 9rem;
+     font-size: 11rem;
      background: url(../resources/Images/parallaxThree.png);
      background-size: cover;
     }
@@ -126,8 +125,8 @@ header {
      bottom: 1000px;
      height: 80vh;
      display: flex;
+     font-family: 'Amaranth', sans-serif;
      align-items: center;
-     font-family: 'Lobster Two', cursive;
      z-index: 1;
    }
 
