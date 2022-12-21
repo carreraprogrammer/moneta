@@ -124,10 +124,13 @@ header {
 [data-aos="rotate-c"] {
   transform: rotate(-90deg);
   transition-property: transform;
+  opacity: 0;
+  transition: all 1s ease-in-out
 }
 
 [data-aos="rotate-c"].aos-animate {
   transform: rotate(90deg);
+  opacity: 1;
 }
 
 #form {

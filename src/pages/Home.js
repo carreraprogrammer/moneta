@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import '../Styles/Home.css'
 import Carousel from '../components/Carousel'
-import $ from 'jquery'
+import $, { nodeName } from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
@@ -55,16 +55,20 @@ const Home = () => {
               style={{
                 width: '200px',
                 height: '200px',
-                border: '2px solid red',
                 background: 'transparent',
+                border: 'none',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
             >
-              <p  id='shopBtnText'>TIENDA</p>
-              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c" data-aos-duration="3000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="top-top" data-aos-anchor='#shopSection' />
-          </button>
+              <p  data-aos="fade-in" data-aos-duration="2000" id='shopBtnText' onMouseOver={() => {
+                $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'})
+              }} onMouseLeave={()=> {
+                $('#shopButtonImage').css({animation: 'none'})
+              }} style={{cursor: 'pointer'}}>TIENDA</p>
+              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c" data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="top-top" data-aos-anchor='#shopSection' />
+            </button>
           </div>
         </div>
         <div id='form'>
