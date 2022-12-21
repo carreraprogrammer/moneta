@@ -9,7 +9,7 @@ a {
 }
 
 a:hover {
-  color: #6d0022;
+  color: #ea984e;
 }
 
 nav {
@@ -21,7 +21,7 @@ nav {
   padding: 0 15px;
   position: fixed;
   display: fixed;
-  background-color: #f7af74;
+  background-color: #8c3048;
   z-index: 1100;
 }
 
@@ -57,8 +57,7 @@ nav.navhidde {
   justify-content: center;
   background: url('../resources/Images/mobileMenuBg.gif');
   background-size: contain;
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-size: 2.5rem;
   z-index: 0;
   transition: all 1s ease-in-out;
 }

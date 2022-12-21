@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,400;1,700&family=Lobster+Two:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* MOBILE FIRST */
 
 header {
@@ -10,11 +11,6 @@ header {
   font-size: 3rem;
 }
 
-#headerTitle {
-  position: sticky;
-  top: 0;
-}
-
 #homeGallery {
   height: 40vh;
   width: 100%;
@@ -23,8 +19,24 @@ header {
   justify-content: center;
 }
 
-#frontImage{
-  z-index: 1;
+#frontImage {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+#frontImage2 {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+#backPage {
+  z-index: -1;
   width: 100%;
   height: 100%;
   display: block;
@@ -39,7 +51,7 @@ header {
 }
 
 #homeGalleryTwo {
-  background: url(../resources/Images/homeGalleryTwo.JPG);
+  background: url(../resources/Images/homeGalleryTwo.svg);
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -63,6 +75,35 @@ header {
   font-family: 'Lato', sans-serif;
 }
 
+#gifHomeContainer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#gifHome {
+  width: 90%;
+  height: 70%;
+  background: url(../resources/Images/gifHome.gif);
+  background-size: cover;
+}
+
+#arrowContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+#arrowContainer:hover {
+  transform: translateX(0.5%)
+}
+
 /* TABLETS */
 
 @media (min-width: 768px) {
@@ -74,22 +115,24 @@ header {
 @media (min-width: 1025px) {
    header {
      height: 100vh;
-     font-size: 10rem;
+     font-size: 9rem;
      background: url(../resources/Images/parallaxThree.png);
      background-size: cover;
     }
 
    #headerTitle {
-     position: sticky;
+     position:sticky;
      top: 0;
      bottom: 1000px;
      height: 80vh;
      display: flex;
      align-items: center;
+     font-family: 'Lobster Two', cursive;
+     z-index: 1;
    }
 
    #frontImage{
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     height: 100%;
     display: block;
@@ -107,7 +150,7 @@ header {
    }
 
    #homeGalleryOne {
-     background: url('../resources/Images/homeGalleryOne.JPG');
+     background: url('../resources/Images/homeGalleryOne.svg');
      width: 33.333%;
      height: 100%;
      background-size: cover;
@@ -115,7 +158,7 @@ header {
    }
 
    #homeGalleryThree {
-     background: url('../resources/Images/homeGalleryThree.JPG');
+     background: url('../resources/Images/homeGalleryThree.svg');
      width: 33.333%;
      height: 100%;
      background-size: cover;
@@ -207,24 +250,24 @@ header {
   }
   
   #homeDescription {
-    width: 50%;
+    width: 30%;
     font-size: 1.7rem;
     text-align: center;
     font-family: 'Lato', sans-serif;
   }
 
-  #gifHomeContainer {
-    width: 100%;
-    height: 90vh;
-    border: 2px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #arrowContainer {
+    width: 90%;
   }
 
+  #gifHomeContainer {
+    width: 100%;
+    height: 100vh;
+  }
+  
   #gifHome {
-    width: 50%;
-    height: 70%;
-    border: 1px solid blue;
+    width: 80%;
+    height: 90%;
+    background-size: cover;
   }
 }
