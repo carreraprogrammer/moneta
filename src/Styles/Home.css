@@ -75,7 +75,7 @@ header {
   font-family: 'Lato', sans-serif;
 }
 
-#gifHomeContainer {
+#imageHomeContainer {
   width: 100%;
   height: 50vh;
   display: flex;
@@ -84,10 +84,11 @@ header {
   align-items: center;
 }
 
-#gifHome {
+#imageHome {
   width: 90%;
   height: 70%;
   background-size: cover;
+  border: 3px solid black;
 }
 
 #arrowContainer {
@@ -103,6 +104,19 @@ header {
   transform: translateX(0.5%)
 }
 
+#shopContainer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shop {
+  width: 90%;
+  height: 90%;
+}
+
 /* TABLETS */
 
 @media (min-width: 768px) {
@@ -114,8 +128,8 @@ header {
 @media (min-width: 1025px) {
    header {
      height: 100vh;
-     font-size: 11rem;
-     background: url(../resources/Images/parallaxThree.png);
+     font-size: 10rem;
+     background: url(../resources/Images/parallaxThree.svg);
      background-size: cover;
     }
 
@@ -259,14 +273,19 @@ header {
     width: 90%;
   }
 
-  #gifHomeContainer {
+  #imageHomeContainer {
     width: 100%;
     height: 100vh;
   }
   
-  #gifHome {
+  #imageHome {
     width: 80%;
     height: 90%;
     background-size: cover;
+  }
+
+  #shop {
+    width: 30%;
+    height: 90%;
   }
 }
