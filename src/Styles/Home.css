@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* MOBILE FIRST */
 
+/* HEADER SECTION */
+
 header {
   width: 100%;
   height: 45vh;
@@ -54,6 +56,10 @@ header {
   background-size: cover;
   background-position-y: 50%;
 }
+
+/* HEADER SECTION */
+
+/* CAROUSEL SECTION */
 
 #carouselOne {
   width: 100%;
@@ -133,6 +139,31 @@ header {
   font-size: 1.7rem;
 }
 
+/* Animations for carousel */
+
+[data-aos="carouselRight"] {
+  transform: translateX(10%)
+}
+
+[data-aos="carouselRight"].aos-animate {
+  transform: translateX(-10%)
+}
+
+
+[data-aos="carouselBtnRight"] {
+  transform: translateX(20%)
+}
+
+[data-aos="carouselBtnRight"].aos-animate {
+  transform: translateX(-20%)
+}
+
+/* End Animations for carousel */
+
+/* END CAROUSEL SECTION */
+
+/* DESCRIPTION AND HOME IMAGE*/
+
 #descriptionContainer {
   width: 100%;
   display: flex;
@@ -181,6 +212,10 @@ header {
   margin-right: 5%;
 }
 
+/* END DESCRIPTION AND HOME IMAGE*/
+
+/* SHOP SECTION */
+
 #shopSection {
   width: 100%;
   height: 80vh;
@@ -212,7 +247,7 @@ header {
   color: black;
 }
 
-/* ANIMATION SHOP BUTTON */ 
+/* Aos animation shop button */ 
 
 [data-aos="rotate-c"] {
   transform: rotate(-90deg);
@@ -234,29 +269,6 @@ header {
 [data-aos="imageAnimation"].aos-animate {
   transform: translateY(-10%);
   opacity: 1;
-}
-
-[data-aos="carouselRight"] {
-  transform: translateX(10%)
-}
-
-[data-aos="carouselRight"].aos-animate {
-  transform: translateX(-10%)
-}
-
-
-[data-aos="carouselBtnRight"] {
-  transform: translateX(20%)
-}
-
-[data-aos="carouselBtnRight"].aos-animate {
-  transform: translateX(-20%)
-}
-
-
-#form {
-  height: 100vh;
-  width: 100%;
 }
 
 #shopButtonImage:hover {
@@ -290,7 +302,7 @@ header {
   }
 }
 
-/* ANIMATION SHOP BUTTON */ 
+/* Css animation shop button */ 
 
 #shopImage {
   width: 70%;
@@ -300,6 +312,12 @@ header {
   background-size: contain;
   border: 4px solid #6d0022;
 }
+
+/* END SHOP SECTION */
+
+/* EVENTS SECTION */
+
+/* EVENTS SECTION */
 
 /* TABLETS */
 
