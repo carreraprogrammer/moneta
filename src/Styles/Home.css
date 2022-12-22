@@ -75,9 +75,9 @@ header {
 }
 
 #carouselSandwichContainer {
-  flex-basis: 15%;
-  width: 15%;
-  min-width: 15%;
+  flex-basis: 20%;
+  width: 20%;
+  min-width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,16 +87,21 @@ header {
 #carouselSandwich {
   border: 2px solid #ea984e;
   width: 100%;
+  min-width: 20%;
+}
+
+#carouselImgOne {
+  display: none;
 }
 
 #carouselBtnContainer {
   flex-basis: 20%;
   min-width: 20%;
+  max-width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80%;
-  transition: all 1s ease-in-out;
 }
 
 #carouselBtnContainer:hover {
@@ -232,20 +237,20 @@ header {
 }
 
 [data-aos="carouselRight"] {
-  transform: translateX(20%)
+  transform: translateX(10%)
 }
 
 [data-aos="carouselRight"].aos-animate {
-  transform: translateX(-20%)
+  transform: translateX(-10%)
 }
 
 
 [data-aos="carouselBtnRight"] {
-  transform: translateX(80%)
+  transform: translateX(40%)
 }
 
 [data-aos="carouselBtnRight"].aos-animate {
-  transform: translateX(-80%)
+  transform: translateX(-40%)
 }
 
 
@@ -365,6 +370,10 @@ header {
     -ms-overflow-style: none;
     transition: all 3s ease-in-out;
   }
+
+  #carouselImgOne {
+    display: block;
+  }  
   
   #carouselOne::-webkit-scrollbar {
     width: 0;

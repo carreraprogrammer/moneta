@@ -50,7 +50,7 @@ const Carousel = () => {
   
   return (
   <div id='carouselOne' onMouseLeave={startCarousel} onMouseOver={stopCarousel}>
-    <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='2000' />
+    <img className='carouselOneImg'  id='carouselImgOne' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='2000' />
     <div id='carouselSandwichContainer'  data-aos='carouselBtnRight' data-aos-anchor-placement="center-center" data-aos-duration='2000'>
       <img id='carouselSandwich' alt='sandwich' src={sandwich} />
     </div>
