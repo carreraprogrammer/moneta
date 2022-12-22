@@ -56,7 +56,60 @@ header {
 }
 
 #carouselOne {
-  display: none;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  transition: all 3s ease-in-out;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.carouselOneImg {
+  flex-basis: 40%;
+  max-width: 80%;
+  height: 60%;
+}
+
+#carouselBtnContainer {
+  flex-basis: 20%;
+  min-width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+
+#carouselBtnContainer:hover {
+  background: url('../resources/Images/btnBg.gif');
+  background-size: contain;
+  transform: rotate(5deg);
+}
+
+#carouselBtn {
+  height: 80%;
+  width: 80%;
+  border-radius: 100%;
+  margin-top: 3%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  background-color: #6d0022;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+
+#carouselBtn:hover {
+  transform: rotate(5deg);
+  background-color: #f4c382;
+  border: 4px solid #ea984e;
+  font-size: 1.7rem;
 }
 
 #descriptionContainer {

@@ -44,7 +44,7 @@ const Carousel = () => {
   <div id='carouselOne' onMouseLeave={startCarousel} onMouseOver={stopCarousel}>
     <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="bottom-center" data-aos-duration='2000' data-aos-anchor='#homeGallery' />
     <div id='carouselBtnContainer' data-aos='carouselBtnRight' data-aos-anchor-placement="center-center" data-aos-duration='500' >
-      <button id='carouselBtn' style={{marginRight: '10px', marginBottom: '10px',}}>Menú</button>
+      <button id='carouselBtn'>Menú</button>
     </div>
     <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='2000' />
   </div>
