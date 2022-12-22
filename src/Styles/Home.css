@@ -159,6 +159,24 @@ header {
   opacity: 1;
 }
 
+[data-aos="carouselRight"] {
+  transform: translateX(10%)
+}
+
+[data-aos="carouselRight"].aos-animate {
+  transform: translateX(-10%)
+}
+
+
+[data-aos="carouselBtnRight"] {
+  transform: translateX(40%)
+}
+
+[data-aos="carouselBtnRight"].aos-animate {
+  transform: translateX(-40%)
+}
+
+
 #form {
   height: 100vh;
   width: 100%;
@@ -199,7 +217,6 @@ header {
 #shopImage {
   width: 70%;
   height: 90%;
-  border: 2px solid red;
   margin-bottom: 5%;
   background: url(../resources/Images/chemex.svg);
   background-size: contain;
