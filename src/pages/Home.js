@@ -17,15 +17,19 @@ const Home = () => {
   
     const startCarousel = () => {
       $('#carouselOne > :nth-child(1)').css({
-        transform: 'translateX(3%)',
+        transform: 'translateX(-3%)',
         transition: 'all 5s ease-in-out'
       })
-      $('#carouselOne > :nth-child(3)').css({
-        transform: 'translateX(3%)',
+      $('#carouselOne > :nth-child(4)').css({
+        transform: 'translateX(-3%)',
         transition: 'all 5s ease-in-out'
       })
       $('#carouselOne > :nth-child(2)').css({
-        transform: 'translateX(12%)',
+        transform: 'translateX(-12%)',
+        transition: 'all 5s ease-in-out'
+      })
+      $('#carouselOne > :nth-child(3)').css({
+        transform: 'translateX(-12%)',
         transition: 'all 5s ease-in-out'
       })
     }
