@@ -48,7 +48,7 @@ header {
 }
 
 #homeGalleryTwo {
-  background: url(../resources/Images/homeGalleryTwo.svg);
+  background: url(../resources/Images/homeGalleryTwoMobile.svg);
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -317,9 +317,11 @@ header {
    }
 
    #homeGalleryTwo {
-     width: 33.333%;
-     background-size: cover;
-     background-position: center;
+    background: url(../resources/Images/homeGalleryTwo.svg);
+    width: 33.333%;
+    height: 100%;
+    background-size: cover;
+    background-position-y: 50%;
    }
 
    #homeGalleryOne {
