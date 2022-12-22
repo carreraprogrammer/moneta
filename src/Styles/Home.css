@@ -161,7 +161,7 @@ header {
 }
 
 [data-aos="imageAnimation"].aos-animate {
-  transform: translateY(-15%);
+  transform: translateY(-10%);
   opacity: 1;
 }
 
@@ -203,10 +203,12 @@ header {
 /* ANIMATION SHOP BUTTON */ 
 
 #shopImage {
-  width: 90%;
+  width: 70%;
   height: 90%;
   border: 2px solid red;
   margin-bottom: 5%;
+  background: url(../resources/Images/chemex.svg);
+  background-size: contain;
 }
 
 /* TABLETS */
@@ -375,19 +377,20 @@ header {
 
   #shopImage {
     width: 30%;
-    height: 90%;
+    height: 95%;
     border: 2px solid red;
     margin-bottom: 5%;
+    background-size: cover;
   }
 
   [data-aos="imageAnimation"] {
     transform: translateY(0%);
-    transition-property: transform;
+    transition-property: all;
     opacity: 0;
   }
   
   [data-aos="imageAnimation"].aos-animate {
-    transform: translateY(-12%);
+    transform: translateY(-9%);
     opacity: 1;
   }
 
