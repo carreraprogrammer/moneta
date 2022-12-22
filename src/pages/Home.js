@@ -63,7 +63,7 @@ const Home = () => {
               }} onMouseLeave={()=> {
                 $('#shopButtonImage').css({animation: 'none'})
               }} style={{cursor: 'pointer', fontWeight: 'bold'}}>TIENDA</p>
-              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
+              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="3000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
             </NavLink>
           </div>
         </div>
