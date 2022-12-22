@@ -130,7 +130,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(45%)
+  transform: translateY(45%);
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
 }
 
 /* ANIMATION SHOP BUTTON */ 
@@ -138,7 +141,7 @@ header {
 [data-aos="rotate-c"] {
   transform: rotate(-90deg);
   transition-property: transform;
-  opacity: 0;
+  opacity: 0.8;
   transition: all 1s ease-in-out
 }
 
@@ -220,6 +223,7 @@ header {
   margin-bottom: 5%;
   background: url(../resources/Images/chemex.svg);
   background-size: contain;
+  border: 4px solid #6d0022;
 }
 
 /* TABLETS */
@@ -388,7 +392,6 @@ header {
   #shopImage {
     width: 30%;
     height: 95%;
-    border: 2px solid red;
     margin-bottom: 5%;
     background-size: cover;
   }

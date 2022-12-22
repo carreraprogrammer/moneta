@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,400;1,700&family=Lobster+Two:wght@400;700&display=swap');
 
 /* MOBILE FIRST */
-a {
+.navigationLinks {
   text-decoration: none;
   color: black;
   font-family: 'Lato', sans-serif;
   font-size: 3rem;
 }
 
-a:hover {
+.navigationLinks:hover {
   color: #ea984e;
 }
 
@@ -135,7 +135,7 @@ nav.navhidde {
     padding: 0 5%;
   }
 
-  a {
+  .navigationLinks {
     font-size: 1.5rem;
     }
 }

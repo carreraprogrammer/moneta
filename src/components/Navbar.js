@@ -47,10 +47,10 @@ const Navbar = () => {
   return(
     <nav className='nav'>
       <ul className='navigation'>
-        <NavLink to='/' onClick={handleNavigation}>Principal</NavLink>
-        <NavLink to='/Coffee' onClick={handleNavigation}>Café</NavLink>
-        <NavLink to='/Shop' onClick={handleNavigation}>Tienda</NavLink>
-        <NavLink to='/About' onClick={handleNavigation}>About</NavLink>
+        <NavLink className='navigationLinks' to='/' onClick={handleNavigation}>Principal</NavLink>
+        <NavLink className='navigationLinks' to='/Coffee' onClick={handleNavigation}>Café</NavLink>
+        <NavLink className='navigationLinks' to='/Shop' onClick={handleNavigation}>Tienda</NavLink>
+        <NavLink className='navigationLinks' to='/About' onClick={handleNavigation}>About</NavLink>
       </ul>
       <div className='burgerMenu' onClick={handleNavigation}>
         <span className='burgerLine'></span>    

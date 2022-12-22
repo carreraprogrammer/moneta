@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import arrow from '../resources/Images/arrow.svg'
 import affogato from '../resources/Images/affogato.png'
 import shopBtn from '../resources/Images/shopHomeBtn.png'
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     useEffect(() => {
@@ -56,14 +57,14 @@ const Home = () => {
           <h1 data-aos='fade-up' id='shopTitle'>SHOP</h1>
           <div id='shopImage' data-aos='imageAnimation' data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
           
-            <button id='shopBtn'>
-              <p  data-aos="fade-up" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
+            <NavLink id='shopBtn' to='/Shop'>
+              <p  data-aos="fade-in" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center"  data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
                 $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'})
               }} onMouseLeave={()=> {
                 $('#shopButtonImage').css({animation: 'none'})
               }} style={{cursor: 'pointer', fontWeight: 'bold'}}>TIENDA</p>
-              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer' />
-            </button>
+              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" />
+            </NavLink>
           </div>
         </div>
         <div id='form'>

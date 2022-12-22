@@ -3,6 +3,7 @@ import $ from 'jquery'
 import React, {useEffect} from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { NavLink } from 'react-router-dom';
 
 const Carousel = () => {
   useEffect(() => {
@@ -41,11 +42,11 @@ const Carousel = () => {
   
   return (
   <div id='carouselOne' onMouseLeave={startCarousel} onMouseOver={stopCarousel}>
-    <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos-easing="ease-in-sine" data-aos='carouselRight' data-aos-anchor-placement="top-bottom" data-aos-duration='2000' data-aos-anchor='#homeGallery' />
-    <div id='carouselBtnContainer' data-aos-easing="ease-in-sine" data-aos='carouselBtnRight' data-aos-anchor-placement="top-center" data-aos-duration='2000'>
+    <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="bottom-center" data-aos-duration='2000' data-aos-anchor='#homeGallery' />
+    <div id='carouselBtnContainer' data-aos='carouselBtnRight' data-aos-anchor-placement="center-center" data-aos-duration='500' >
       <button id='carouselBtn' style={{marginRight: '10px', marginBottom: '10px',}}>Menú</button>
     </div>
-    <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos-easing="ease-in-sine" data-aos='carouselRight' data-aos-anchor-placement="top-bottom" data-aos-duration='2000'/>
+    <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='2000' />
   </div>
   )
 }
