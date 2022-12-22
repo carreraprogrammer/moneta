@@ -38,7 +38,7 @@ const Home = () => {
       <div id="homeContainer">
         <Header />
         <div id='homeGallery'>
-          <div id='galleryContainer' data-aos='fade-in' onMouseOver={startCarousel}>
+          <div id='galleryContainer' data-aos='fade-in' data-aos-anchor-place='center-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000' onMouseOver={startCarousel}>
             <div id='homeGalleryOne'></div>
             <div id='homeGalleryTwo'></div>
             <div id='homeGalleryThree'></div>
@@ -52,7 +52,7 @@ const Home = () => {
           <div id='arrowContainer'>
             <img id='arrowHome' src={arrow} alt='arrow' data-aos='fade-right' />
           </div>
-          <div id='imageHome'>
+          <div id='imageHome' data-aos='fade-in' data-aos-anchor-place='top-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000'>
             <img style={{width: '100%', height: '100%'}} src={affogato} alt='affogato' />
           </div>
         </div>
@@ -60,7 +60,6 @@ const Home = () => {
         <div id='shopSection'>
           <h1 data-aos='fade-up' id='shopTitle'>SHOP</h1>
           <div id='shopImage' data-aos='imageAnimation' data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
-          
             <NavLink id='shopBtn' to='/Shop'>
               <p  data-aos="fade-in" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center"  data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
                 $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'})
