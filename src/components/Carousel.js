@@ -12,20 +12,20 @@ const Carousel = () => {
   
   const stopCarousel = () => {
       $('#carouselOne > :nth-child(1)').css({
-          transform: 'translateX(-3%)',
+          transform: 'translateX(0%)',
           transition: 'all 20s ease-in-out'
         })
       $('#carouselOne > :nth-child(3)').css({
           transform: 'translateX(-3%)',
-          transition: 'all 20s ease-in-out'
+          transition: 'all 40s ease-in-out'
         })
       $('#carouselOne > :nth-child(2)').css({
           transform: 'translateX(-9%)',
-          transition: 'all 20s ease-in-out'
+          transition: 'all 40s ease-in-out'
         })
       $('#carouselOne > :nth-child(4)').css({
           transform: 'translateX(-9%)',
-          transition: 'all 20s ease-in-out'
+          transition: 'all 40s ease-in-out'
       })
     }
 

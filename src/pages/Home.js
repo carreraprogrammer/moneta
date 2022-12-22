@@ -9,6 +9,7 @@ import arrow from '../resources/Images/arrow.svg'
 import affogato from '../resources/Images/affogato.png'
 import shopBtn from '../resources/Images/shopHomeBtn.png'
 import { NavLink } from 'react-router-dom';
+import shopBackground from '../resources/Images/backgroundShop.svg'
 
 const Home = () => {
     useEffect(() => {
@@ -31,6 +32,32 @@ const Home = () => {
       $('#carouselOne > :nth-child(3)').css({
         transform: 'translateX(-12%)',
         transition: 'all 5s ease-in-out'
+      })
+    }
+
+    const handleOnShopBackground = () => {
+      $('#shopSection').css({
+        background: `url(${shopBackground})`,
+        backgroundColor: '#ea984e',
+        backgroundSize: 'cover',
+        backgroundPosition:'center',
+        transition: 'all 5s ease-in-out'
+      })
+      $('#shopImage').css({
+        transform: 'rotate(-2deg) translateY(-9%)'
+      })
+    }
+
+    const handleLeaveShopBackground = () => {
+      $('#shopSection').css({
+        background: '',
+        backgroundColor: '#ea984e',
+        backgroundSize: 'cover',
+        backgroundPosition:'center',
+        transition: 'all 5s ease-in-out'
+      })
+      $('#shopImage').css({
+        transform: 'rotate(0deg) translateY(-9%)'
       })
     }
 
@@ -62,11 +89,11 @@ const Home = () => {
           <div id='shopImage' data-aos='imageAnimation' data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
             <NavLink id='shopBtn' to='/Shop'>
               <p  data-aos="fade-in" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center"  data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
-                $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'})
+                $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'}); handleOnShopBackground()
               }} onMouseLeave={()=> {
-                $('#shopButtonImage').css({animation: 'none'})
+                $('#shopButtonImage').css({animation: 'none'}); handleLeaveShopBackground()
               }} style={{cursor: 'pointer', fontWeight: 'bold'}}>TIENDA</p>
-              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="3000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
+              <img onMouseOver={handleOnShopBackground} onMouseLeave={handleLeaveShopBackground} id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="3000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
             </NavLink>
           </div>
         </div>

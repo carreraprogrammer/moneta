@@ -189,7 +189,9 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ea984e;
+  background-color: #ea984e;
+  background-size: cover;
+  background-position: center;
 }
 
 #shopTitle {
@@ -215,13 +217,11 @@ header {
 [data-aos="rotate-c"] {
   transform: rotate(-90deg);
   transition-property: transform;
-  opacity: 0.8;
   transition: all 1s ease-in-out
 }
 
 [data-aos="rotate-c"].aos-animate {
   transform: rotate(90deg);
-  opacity: 1;
 }
 
 
@@ -246,11 +246,11 @@ header {
 
 
 [data-aos="carouselBtnRight"] {
-  transform: translateX(40%)
+  transform: translateX(20%)
 }
 
 [data-aos="carouselBtnRight"].aos-animate {
-  transform: translateX(-40%)
+  transform: translateX(-20%)
 }
 
 
@@ -261,6 +261,7 @@ header {
 
 #shopButtonImage:hover {
   animation: rotation 1s infinite linear;
+  opacity: 1
 }
 
 #shopButtonImage {
@@ -476,6 +477,7 @@ header {
     height: 95%;
     margin-bottom: 5%;
     background-size: cover;
+    cursor: pointer;
   }
 
   [data-aos="imageAnimation"] {
