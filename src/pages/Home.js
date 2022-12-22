@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import '../Styles/Home.css'
 import Carousel from '../components/Carousel'
-import $, { nodeName } from 'jquery'
+import $ from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
@@ -11,18 +11,21 @@ import shopBtn from '../resources/Images/shopHomeBtn.png'
 
 const Home = () => {
     useEffect(() => {
-        AOS.init({duration: 500})
+        AOS.init({duration: 2000})
     }, [])
   
     const startCarousel = () => {
       $('#carouselOne > :nth-child(1)').css({
-        transform: 'translateX(-20%)'
+        transform: 'translateX(3%)',
+        transition: 'all 5s ease-in-out'
       })
       $('#carouselOne > :nth-child(3)').css({
-        transform: 'translateX(-20%)'
+        transform: 'translateX(3%)',
+        transition: 'all 5s ease-in-out'
       })
       $('#carouselOne > :nth-child(2)').css({
-        transform: 'translateX(-80%)'
+        transform: 'translateX(12%)',
+        transition: 'all 5s ease-in-out'
       })
     }
 
@@ -42,32 +45,24 @@ const Home = () => {
         </div>
         <div id='imageHomeContainer'>
           <div id='arrowContainer'>
-            <img style={{width: '200px', height: '400px'}} src={arrow} alt='arrow' data-aos='fade-right' />
+            <img id='arrowHome' src={arrow} alt='arrow' data-aos='fade-right' />
           </div>
           <div id='imageHome'>
-            <img style={{width: '100%', height: '100%'}} src={affogato} />
+            <img style={{width: '100%', height: '100%'}} src={affogato} alt='affogato' />
           </div>
         </div>
+        
         <div id='shopSection'>
-          <div id='shopImage'>
-          <h1 data-aos='fade-up'>SHOP</h1>
-            <button
-              style={{
-                width: '200px',
-                height: '200px',
-                background: 'transparent',
-                border: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <p  data-aos="fade-in" data-aos-duration="2000" id='shopBtnText' onMouseOver={() => {
+          <h1 data-aos='fade-up' id='shopTitle'>SHOP</h1>
+          <div id='shopImage' data-aos='imageAnimation' data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
+          
+            <button id='shopBtn'>
+              <p  data-aos="fade-up" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
                 $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'})
               }} onMouseLeave={()=> {
                 $('#shopButtonImage').css({animation: 'none'})
-              }} style={{cursor: 'pointer'}}>TIENDA</p>
-              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c" data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="top-top" data-aos-anchor='#shopSection' />
+              }} style={{cursor: 'pointer', fontWeight: 'bold'}}>TIENDA</p>
+              <img id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer' />
             </button>
           </div>
         </div>

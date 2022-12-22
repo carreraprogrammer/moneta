@@ -18,8 +18,8 @@ const Header = () => {
           </span>
           <span data-aos="fade-up" data-aos-duration="3000"> 
           oneta
-          </span></h1>
-          <img id='frontImage' src={frontImage}/>
+          </span></h1> 
+          <img id='frontImage' src={frontImage} style={{maxWidth: '90%'}} alt='coffee dates'/>
     </header>
   )
 }

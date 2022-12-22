@@ -9,6 +9,9 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  background: url(../resources/Images/parallaxThree.svg);
+  background-size: cover;
+  max-width: 100%;
 }
 
 #homeGallery {
@@ -89,11 +92,12 @@ header {
   height: 70%;
   background-size: cover;
   border: 3px solid black;
+  margin-bottom: 5%;
 }
 
 #arrowContainer {
   width: 100%;
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -104,19 +108,35 @@ header {
   transform: translateX(0.5%)
 }
 
+#arrowHome {
+  height: 50px;
+  margin-right: 5%;
+}
+
 #shopSection {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   font-size: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background: #ea984e;
 }
 
-#shop {
-  width: 90%;
-  height: 90%;
+#shopTitle {
+  font-size: 10rem;
+}
+
+#shopBtn {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(45%)
 }
 
 /* ANIMATION SHOP BUTTON */ 
@@ -130,6 +150,18 @@ header {
 
 [data-aos="rotate-c"].aos-animate {
   transform: rotate(90deg);
+  opacity: 1;
+}
+
+
+[data-aos="imageAnimation"] {
+  transform: translateY(0%);
+  transition-property: transform;
+  opacity: 0;
+}
+
+[data-aos="imageAnimation"].aos-animate {
+  transform: translateY(-15%);
   opacity: 1;
 }
 
@@ -150,6 +182,13 @@ header {
 
 #shopBtnText {
   z-index: 3;
+  transition: all 0.5s ease-in-out
+}
+
+#shopBtnText:hover {
+  color: #6d0022;
+  font-size: 1.2rem
+
 }
 
 @keyframes rotation {
@@ -159,6 +198,15 @@ header {
   to {
       transform: rotate(360deg);
   }
+}
+
+/* ANIMATION SHOP BUTTON */ 
+
+#shopImage {
+  width: 90%;
+  height: 90%;
+  border: 2px solid red;
+  margin-bottom: 5%;
 }
 
 /* TABLETS */
@@ -173,7 +221,6 @@ header {
    header {
      height: 100vh;
      font-size: 15rem;
-     background: url(../resources/Images/parallaxThree.svg);
      background-size: cover;
     }
 
@@ -236,27 +283,7 @@ header {
     width: 0;
     height: 0;
   }
-  
-  #carouselOne > :nth-child(1),
-  #carouselOne > :nth-child(2),
-  #carouselOne > :nth-child(3)
-  {
-    transition: 2s ease-in-out;
-  }
-  
-  
-  #carouselOne:hover > :nth-child(1),
-  #carouselOne:hover > :nth-child(3)
-  {
-    transform: translateX(-20%);
-    transition: 4s ease-in-out;
-  }
-  
-  #carouselOne:hover > :nth-child(2) {
-   transform: translateX(-80%);
-   transition: all 3.9s ease-in-out;
-  }
-  
+
   .carouselOneImg {
     flex-basis: 40%;
     max-width: 80%;
@@ -276,7 +303,7 @@ header {
   #carouselBtnContainer:hover {
     background: url('../resources/Images/btnBg.gif');
     background-size: contain;
-    transform: rotate(50deg);
+    transform: rotate(5deg);
   }
   
   #carouselBtn {
@@ -311,19 +338,26 @@ header {
     font-size: 1.7rem;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 10%;
   }
 
   #arrowContainer {
-    width: 90%;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  #arrowHome {
+    height: 120px;
+    margin-right: 8%;
   }
 
   #imageHomeContainer {
     width: 100%;
-    height: 130vh;
+    height: 100vh;
   }
   
   #imageHome {
-    width: 80%;
+    width: 70%;
     height: 90%;
     background-size: cover;
     margin-bottom: 10%;
@@ -332,5 +366,39 @@ header {
   #shop {
     width: 30%;
     height: 90%;
+  }
+
+  #shopSection {
+    height: 120vh;
+  }
+  
+
+  #shopImage {
+    width: 30%;
+    height: 90%;
+    border: 2px solid red;
+    margin-bottom: 5%;
+  }
+
+  [data-aos="imageAnimation"] {
+    transform: translateY(0%);
+    transition-property: transform;
+    opacity: 0;
+  }
+  
+  [data-aos="imageAnimation"].aos-animate {
+    transform: translateY(-12%);
+    opacity: 1;
+  }
+
+  #shopBtn {
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-40%)
   }
 }
