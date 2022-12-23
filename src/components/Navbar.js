@@ -4,7 +4,7 @@ import $ from 'jquery'
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(1000);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
 
   const handleNavigation = () => {
@@ -20,12 +20,12 @@ const Navbar = () => {
       const navbar = document.querySelector('.nav')
 
       // If the user is scrolling down and the navbar is not already hidden
-      if (currentScrollPos > prevScrollPos && !navbar.classList.contains('navhidde')) {
+      if (currentScrollPos  > prevScrollPos && !navbar.classList.contains('navhidde')) {
         // Add the 'navhidde' class to hide the navbar
         navbar.classList.add('navhidde');
       }
       // If the user is scrolling up and the navbar is already hidden
-      else if (currentScrollPos < prevScrollPos && navbar.classList.contains('navhidde')) {
+      else if (currentScrollPos <= prevScrollPos  && navbar.classList.contains('navhidde')) {
         // Remove the 'navhidde' class to display the navbar
         navbar.classList.remove('navhidde');
       }

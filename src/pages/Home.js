@@ -1,10 +1,25 @@
+/* COMPONENTS */
+
 import Header from "../components/Header";
-import '../Styles/Home.css'
 import Carousel from '../components/Carousel'
+import Events from "../components/Events";
+
+/* STYLES */
+
+import '../Styles/Home.css'
+
+/* LIBRARIES */
+
 import $ from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+/* HOOKS */
+
 import { useEffect } from 'react'
+
+/* IMAGES */ 
+
 import arrow from '../resources/Images/arrow.svg'
 import affogato from '../resources/Images/affogato.png'
 import ShopHome from "../components/ShopHome";
@@ -56,9 +71,7 @@ const Home = () => {
           </div>
         </div>
         <ShopHome />
-        <div id='form'>
-            
-        </div>
+        <Events />
       </div>
     )
 }
