@@ -23,10 +23,11 @@ nav {
   display: fixed;
   background-color: #8c304c;
   z-index: 1100;
+  transition: all 1s ease-in-out;
 }
 
 nav.navhidde {
-  top: -100%;
+  transform: translateY(-100%)
 }
 
 #logo {
