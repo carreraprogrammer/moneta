@@ -3,6 +3,7 @@
 import Header from "../components/Header";
 import Carousel from '../components/Carousel'
 import Events from "../components/Events";
+import Gallery from "../components/Gallery";
 
 /* STYLES */
 
@@ -10,7 +11,6 @@ import '../Styles/Home.css'
 
 /* LIBRARIES */
 
-import $ from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -28,36 +28,11 @@ const Home = () => {
     useEffect(() => {
         AOS.init({duration: 2000})
     }, [])
-  
-    const startCarousel = () => {
-      $('#carouselOne > :nth-child(1)').css({
-        transform: 'translateX(-3%)',
-        transition: 'all 5s ease-in-out'
-      })
-      $('#carouselOne > :nth-child(4)').css({
-        transform: 'translateX(-3%)',
-        transition: 'all 5s ease-in-out'
-      })
-      $('#carouselOne > :nth-child(2)').css({
-        transform: 'translateX(-12%)',
-        transition: 'all 5s ease-in-out'
-      })
-      $('#carouselOne > :nth-child(3)').css({
-        transform: 'translateX(-12%)',
-        transition: 'all 5s ease-in-out'
-      })
-    }
 
     return(
       <div id="homeContainer">
         <Header />
-        <div id='homeGallery'>
-          <div id='galleryContainer' data-aos='fade-in' data-aos-anchor-place='center-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000' onMouseOver={startCarousel}>
-            <div id='homeGalleryOne'></div>
-            <div id='homeGalleryTwo'></div>
-            <div id='homeGalleryThree'></div>
-          </div>
-        </div>
+        <Gallery />
         <Carousel />
         <div id='descriptionContainer'>
           <p id='homeDescription'>Los cafés especiales se vuelven el feliz acompañante de ideas, aprendizajes y esperanzas. Somos cultura de cafés especiales!</p>

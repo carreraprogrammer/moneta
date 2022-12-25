@@ -22,11 +22,7 @@
 
 #root {
   width: 100%;
-  height: auto;
+  height: 600vh;
   background-color: #8c304c;
   font-family: 'Lato', sans-serif;
-}
-
-h1 {
-  font-family: 'Amaranth', sans-serif;
 }
