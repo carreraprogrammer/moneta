@@ -4,6 +4,7 @@ import React, {useEffect} from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import sandwich from '../resources/Images/carouselSandwich.jpg'
+import { NavLink } from 'react-router-dom';
 
 const Carousel = () => {
   useEffect(() => {
@@ -55,7 +56,7 @@ const Carousel = () => {
       <img id='carouselSandwich' alt='sandwich' src={sandwich} />
     </div>
     <div id='carouselBtnContainer' data-aos='carouselBtnRight' data-aos-anchor-placement="center-center" data-aos-duration='2000'>
-      <button id='carouselBtn'>Menú</button>
+      <NavLink to='/Coffee'  id='carouselBtn' >Menú</NavLink>
     </div>
     <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='2000' />
   </div>
