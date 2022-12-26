@@ -7,6 +7,7 @@ import sandwich from '../resources/Images/SandwichWithBrew.jpg'
 const Coffee = () => {
   useEffect(() => {
     AOS.init({duration: 2000})
+    window.scrollTo(0, 0);
   }, [])
 
 

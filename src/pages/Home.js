@@ -30,7 +30,8 @@ import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     useEffect(() => {
-        AOS.init({duration: 500})
+        AOS.init({duration: 500});
+        window.scrollTo(0, 0);
     }, [])
 
     return(
