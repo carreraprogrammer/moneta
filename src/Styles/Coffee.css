@@ -29,6 +29,10 @@
       height: 100vh;
     }
 
+    #coffeeHeaderTitle {
+      font-size: 15rem;
+    }
+
     #coffeeHeaderDescription{
       width: 35%;
     }

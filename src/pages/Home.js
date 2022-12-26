@@ -24,6 +24,10 @@ import arrow from '../resources/Images/arrow.svg'
 import affogato from '../resources/Images/affogato.png'
 import ShopHome from "../components/ShopHome";
 
+/* ROUTES */
+
+import { NavLink } from 'react-router-dom';
+
 const Home = () => {
     useEffect(() => {
         AOS.init({duration: 500})
@@ -39,7 +43,7 @@ const Home = () => {
         </div>
         <div id='imageHomeContainer'>
           <div id='arrowContainer'>
-            <img id='arrowHome' src={arrow} alt='arrow' data-aos='fade-right' />
+            <NavLink id='arrowHome' to='/Coffee'><img src={arrow} alt='arrow' data-aos='fade-right' /></NavLink>
           </div>
           <div id='imageHome' data-aos='fade-in' data-aos-anchor-place='top-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000'>
             <img style={{width: '100%', height: '100%'}} src={affogato} alt='affogato' />
