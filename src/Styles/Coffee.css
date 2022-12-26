@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid red;
   height: 60vh;
   background-color: #ea984e;
 }

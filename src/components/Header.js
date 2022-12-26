@@ -9,7 +9,7 @@ const Header = () => {
   }, [])
 
   return(
-    <header className='header' id='header' data-aos='fade-in' >
+    <header className='header' id='header' data-aos='fade-in' style={{overflow: 'hidden'}} >
       <h1 
         id='headerTitle'  
       >
@@ -19,7 +19,7 @@ const Header = () => {
           <span data-aos="fade-up" data-aos-duration="3000"> 
           oneta
           </span></h1> 
-          <img id='frontImage' src={frontImage} style={{width: '100%'}} alt='coffee dates'/>
+          <img id='frontImage' src={frontImage} style={{transform: 'scale(1.02)'}} alt='coffee dates'/>
     </header>
   )
 }
