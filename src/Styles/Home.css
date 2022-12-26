@@ -78,7 +78,7 @@ header {
 .carouselOneImg {
   flex-basis: 30%;
   max-width: 60%;
-  height: 60%;
+  height: auto;
 }
 
 #carouselSandwichContainer {
