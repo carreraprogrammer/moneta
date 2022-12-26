@@ -88,6 +88,8 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-right: 24px;
+  margin-left: 24px;
 }
 
 #carouselSandwich {
@@ -249,7 +251,8 @@ header {
   justify-content: center;
   transform: translateY(45%);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Lobster two', coursive;
   color: black;
 }
 
@@ -412,7 +415,7 @@ header {
   }
   
   #carouselBtnContainer {
-    flex-basis: 15%;
+    flex-basis: 12%;
     min-width: 15%;
     display: flex;
     align-items: center;

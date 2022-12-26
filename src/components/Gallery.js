@@ -6,7 +6,7 @@ const Gallery = () => {
     useEffect(() => {
         AOS.init({duration: 2000})
     }, [])
-    
+
     const startCarousel = () => {
         $('#carouselOne > :nth-child(1)').css({
           transform: 'translateX(-3%)',
@@ -27,7 +27,7 @@ const Gallery = () => {
       }
 
   return(
-    <div id='homeGallery'>
+   <div id='homeGallery'>
     <div id='galleryContainer' data-aos='fade-in' data-aos-anchor-place='center-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000' onMouseOver={startCarousel}>
       <div id='homeGalleryOne'></div>
       <div id='homeGalleryTwo'></div>

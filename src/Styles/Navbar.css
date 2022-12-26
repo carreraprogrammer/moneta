@@ -13,7 +13,7 @@
 }
 
 nav {
-  height: 15vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -111,6 +111,7 @@ nav.navhidde {
     justify-content: space-between;
     background-size: 50%;
     padding: 0;
+    height: 15vh;
   }
 
   .burgerMenu {

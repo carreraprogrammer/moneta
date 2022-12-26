@@ -13,8 +13,10 @@ const ShopHome = () => {
       transition: 'all 5s ease-in-out'
     })
     $('#shopImage').css({
-      transform: 'rotate(-2deg) translateY(-9%)'
+      transform: 'rotate(-2deg) translateY(-9%)',
+      transition: 'all 0.5s ease-in-out'
     })
+    $('.nav').addClass('navhidde')
   }
 
   const handleLeaveShopBackground = () => {
@@ -33,14 +35,14 @@ const ShopHome = () => {
   return (
   <div id='shopSection'>
     <h1 data-aos='fade-up' id='shopTitle'>SHOP</h1>
-      <div id='shopImage' data-aos='imageAnimation' data-aos-duration="4000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
+      <div id='shopImage' data-aos='imageAnimation' data-aos-duration="2000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
         <NavLink id='shopBtn' to='/Shop'>
           <p  data-aos="fade-in" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center"  data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
             $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'}); handleOnShopBackground()
           }} onMouseLeave={()=> {
             $('#shopButtonImage').css({animation: 'none'}); handleLeaveShopBackground()
-          }} style={{cursor: 'pointer', fontWeight: 'bold'}}>TIENDA</p>
-          <img onMouseOver={handleOnShopBackground} onMouseLeave={handleLeaveShopBackground} id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="3000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
+          }} style={{cursor: 'pointer', fontWeight: 'bold'}}>Tienda</p>
+          <img onMouseOver={handleOnShopBackground} onMouseLeave={handleLeaveShopBackground} id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="2000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
         </NavLink>
       </div>
   </div>

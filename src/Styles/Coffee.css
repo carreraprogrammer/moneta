@@ -6,17 +6,31 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: 1px solid red;
+  height: 60vh;
+  background-color: #ea984e;
 }
 
 #coffeeHeaderTitle {
-  font-size: 15rem;
+  font-size: 10rem;
   font-weight: bolder;
   font-family: 'Lobster Two', coursive;
 }
 
 #coffeeHeaderDescription {
-  width: 40%;
+  width: 80%;
   font-size: 1.5rem;
   font-family: 'Lato', sans-serif;
   text-align: center;
+}
+
+
+@media (min-width: 1025px) {
+    #coffeeHeader {
+      height: 100vh;
+    }
+
+    #coffeeHeaderDescription{
+      width: 35%;
+    }
 }
