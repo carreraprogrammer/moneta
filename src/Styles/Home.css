@@ -89,8 +89,8 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-right: 24px;
-  margin-left: 24px;
+  margin-right: 12px;
+  margin-left: 12px;
 }
 
 #carouselSandwich {
@@ -121,8 +121,8 @@ header {
 }
 
 #carouselBtn {
-  height: 80px;
-  width: 80px;
+  height: 80%;
+  width: 80%;
   border-radius: 100%;
   margin-top: 3%;
   cursor: pointer;
