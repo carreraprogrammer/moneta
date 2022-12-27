@@ -121,8 +121,8 @@ header {
 }
 
 #carouselBtn {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 100%;
   margin-top: 3%;
   cursor: pointer;
