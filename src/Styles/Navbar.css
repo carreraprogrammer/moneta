@@ -3,7 +3,7 @@
 /* MOBILE FIRST */
 .navigationLinks {
   text-decoration: none;
-  color: black;
+  color: #ea984e;
   font-family: 'Lato', sans-serif;
   font-size: 3rem;
 }
@@ -112,6 +112,10 @@ nav.navhidde {
     background-size: 50%;
     padding: 0;
     height: 15vh;
+  }
+
+  .navigationLinks {
+    color: #2b1914;
   }
 
   .burgerMenu {
