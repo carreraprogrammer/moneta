@@ -215,9 +215,13 @@ header {
   transform: translateX(0.5%)
 }
 
-#arrowHome {
-  height: 50px;
+#arrowHomeLink {
   margin-right: 5%;
+  height: 50px;
+}
+
+#arrowHome {
+  height: 100%;
 }
 
 /* END DESCRIPTION AND HOME IMAGE*/
@@ -470,12 +474,16 @@ header {
 
   #arrowContainer {
     width: 100%;
-    margin-bottom: 5%;
+    height: 80px;
   }
 
+  #arrowHomeLink {
+    height: 80px;
+    margin-right: 10%;
+  }
+  
   #arrowHome {
-    height: 120px;
-    margin-right: 8%;
+    height: 100%;
   }
 
   #imageHomeContainer {

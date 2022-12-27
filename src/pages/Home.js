@@ -44,7 +44,7 @@ const Home = () => {
         </div>
         <div id='imageHomeContainer'>
           <div id='arrowContainer'>
-            <NavLink id='arrowHome' to='/Coffee'><img src={arrow} alt='arrow' data-aos='fade-right' /></NavLink>
+            <NavLink id='arrowHomeLink' to='/Coffee'><img id='arrowHome' src={arrow} alt='arrow' data-aos='fade-right' /></NavLink>
           </div>
           <div id='imageHome' data-aos='fade-in' data-aos-anchor-place='top-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000'>
             <img style={{width: '100%', height: '100%'}} src={affogato} alt='affogato' />
