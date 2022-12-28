@@ -2,11 +2,12 @@ import AOS from 'aos'
 import '../Styles/Coffee.css'
 import { useEffect } from 'react'
 import sandwich from '../resources/Images/SandwichWithBrew.jpg'
+import Menú from '../components/Menú'
 
 
 const Coffee = () => {
   useEffect(() => {
-    AOS.init({duration: 2000})
+    AOS.init({duration: 2000});
     window.scrollTo(0, 0);
   }, [])
 
@@ -22,6 +23,7 @@ const Coffee = () => {
         <div id='homeGalleryOne' style={{background: `url(${sandwich})`, backgroundSize: 'cover', flexBasis: '100%', backgroundPositionX: 'center', backgroundPositionY: 'center'}}></div>
       </div>
     </div>
+    <Menú />
     </>
   )
 }
