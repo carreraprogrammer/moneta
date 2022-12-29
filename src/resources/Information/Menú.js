@@ -1,4 +1,4 @@
-const menú = [
+const menu = [
   {
     name: 'Tinto',
     category: 'Bebidas',
@@ -473,4 +473,4 @@ const menú = [
   },
 ]
 
-export default menú
+export default menu
