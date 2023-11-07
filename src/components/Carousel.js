@@ -3,7 +3,7 @@ import $ from 'jquery'
 import React, {useEffect} from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import sandwich from '../resources/Images/carouselSandwich.jpg'
+import sandwich from '../resources/Images/carouselSandwich.png'
 import { NavLink } from 'react-router-dom';
 
 const Carousel = () => {

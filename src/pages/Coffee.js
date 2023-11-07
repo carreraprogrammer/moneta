@@ -1,7 +1,7 @@
 import AOS from 'aos'
 import '../Styles/Coffee.css'
 import { useEffect } from 'react'
-import sandwich from '../resources/Images/SandwichWithBrew.jpg'
+import sandwich from '../resources/Images/SandwichWithBrew.png'
 import Menú from '../components/Menú'
 
 
