@@ -371,7 +371,7 @@ header {
    }
 
    #homeGalleryTwo {
-    background: url(../resources/Images/homeGalleryTwo.svg);
+    background: url(../resources/Images/homeGalleryTwo.png);
     width: 33.333%;
     height: 100%;
     background-size: cover;
@@ -379,7 +379,7 @@ header {
    }
 
    #homeGalleryOne {
-     background: url('../resources/Images/homeGalleryOne.svg');
+     background: url('../resources/Images/homeGalleryOne.png');
      width: 33.333%;
      height: 100%;
      background-size: cover;
@@ -387,7 +387,7 @@ header {
    }
 
    #homeGalleryThree {
-     background: url('../resources/Images/homeGalleryThree.svg');
+     background: url('../resources/Images/homeGalleryThree.png');
      width: 33.333%;
      height: 100%;
      background-size: cover;
