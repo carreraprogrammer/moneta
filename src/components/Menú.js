@@ -1,5 +1,4 @@
 import menu from '../resources/Information/Menú.js'
-import { useEffect } from 'react'
 
 const Menú = () => {
   const tintos = menu.filter((section) => section.subCategory === 'Tintos' )
