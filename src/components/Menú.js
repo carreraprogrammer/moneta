@@ -3,10 +3,6 @@ import { useEffect } from 'react'
 
 const Menú = () => {
   const tintos = menu.filter((section) => section.subCategory === 'Tintos' )
-  
-  useEffect(
-    () =>  {console.log(tintos)}, []
-  )
 
   return (
     <div id='menu'>
