@@ -1,7 +1,7 @@
 import menu from '../../assets/Information/Menú.js'
-import './Menú.scss'
+import './Menu.scss'
 
-const Menú = () => {
+const Menu = () => {
   const tintos = menu.filter((section) => section.subCategory === 'Tintos' )
 
   return (
@@ -21,5 +21,5 @@ const Menú = () => {
   )
 }
 
-export default Menú
+export default Menu
 
