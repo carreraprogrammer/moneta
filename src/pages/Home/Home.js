@@ -1,13 +1,13 @@
 /* COMPONENTS */
 
-import Header from "../components/Header";
-import Carousel from '../components/Carousel'
-import Events from "../components/Events";
-import Gallery from "../components/Gallery";
+import Header from "../components/Header/Header";
+import Carousel from '../components/Carousel/Carousel'
+import Events from "../components/Events/Events";
+import Gallery from "../components/Gallery/Gallery";
 
 /* STYLES */
 
-import '../Styles/Home.css'
+import '../Styles/Home.scss'
 
 /* LIBRARIES */
 

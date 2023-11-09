@@ -1,3 +1,5 @@
+import './About.scss'
+
 const About = () => {
   return (<h1>This is the about page</h1>)
 }

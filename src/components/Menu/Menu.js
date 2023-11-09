@@ -1,4 +1,5 @@
-import menu from '../resources/Information/Menú.js'
+import menu from '../../assets/Information/Menú.js'
+import './Menú.scss'
 
 const Menú = () => {
   const tintos = menu.filter((section) => section.subCategory === 'Tintos' )

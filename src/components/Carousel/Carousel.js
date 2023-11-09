@@ -5,6 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import sandwich from '../resources/Images/carouselSandwich.png'
 import { NavLink } from 'react-router-dom';
+import './Carousel.scss'
 
 const Carousel = () => {
   useEffect(() => {

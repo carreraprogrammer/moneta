@@ -1,10 +1,10 @@
- import React from "react";
- import { Route, Routes } from 'react-router-dom';
- import Home from "./pages/Home";
- import About from "./pages/About";
- import Shop from "./pages/Shop";
-import Navbar from './components/Navbar'
-import Coffee from "./pages/Coffee";
+import React from "react";
+import { Route, Routes } from 'react-router-dom';
+import Home from "./pages/Home";
+import About from "./pages/About/About";
+import Shop from "./pages/Shop/Shop";
+import Navbar from './components/Navbar/Navbar'
+import Coffee from "./pages/Coffee/Coffee";
 import './App.css'
 
 

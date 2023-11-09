@@ -3,7 +3,7 @@ import '../Styles/Coffee.css'
 import { useEffect } from 'react'
 import sandwich from '../resources/Images/SandwichWithBrew.png'
 import Menú from '../components/Menú'
-
+import './Coffee.scss'
 
 const Coffee = () => {
   useEffect(() => {

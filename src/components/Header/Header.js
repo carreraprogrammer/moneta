@@ -3,6 +3,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import frontImage from '../resources/Images/newFrontPage.svg'
 import leaves from '../resources/Images/leaves.png'
+import './Header.scss'
 
 const Header = () => {
   useEffect(() => {

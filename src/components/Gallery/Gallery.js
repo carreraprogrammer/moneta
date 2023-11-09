@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import AOS from 'aos'
 import { useEffect } from 'react'
+import './Gallery.scss'
 
 const Gallery = () => {
     useEffect(() => {
