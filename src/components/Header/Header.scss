@@ -1,0 +1,59 @@
+// Variables (en caso de que algunos valores se repitan y puedan ser extraídos)
+$font-family-lato: 'Lato', sans-serif;
+$header-height: 50vh;
+$header-font-size: 3rem;
+$header-background-image: url('../../assets/Images/parallaxThree.svg');
+$border-default: 1px solid black;
+
+// Header styles
+.header {
+  width: 100%;
+  height: $header-height;
+  margin: 0 0 10% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $header-font-size;
+  background: $header-background-image;
+  background-size: cover;
+  max-width: 100%;
+  font-family: $font-family-lato;
+  padding-top: 10vh;
+  border: $border-default;
+  overflow: hidden;
+
+  // Anidación para #headerTitle
+  #headerTitle {
+    position: sticky;
+    top: 0;
+    height: 9rem;
+    max-height: 9rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #leaves {
+    width: 20%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 100vh;
+    font-size: 10rem;
+    background-size: cover;
+    text-transform: uppercase;
+
+    #headerTitle {
+      position: static;
+      top: 0;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+   }
+}
