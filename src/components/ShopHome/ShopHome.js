@@ -1,7 +1,8 @@
-import shopBtn from '../resources/Images/shopHomeBtn.png'
+import shopBtn from '../assets/Images/shopHomeBtn.png'
 import { NavLink } from 'react-router-dom';
-import shopBackground from '../resources/Images/backgroundShop.svg'
+import shopBackground from '../assets/Images/backgroundShop.svg'
 import $ from 'jquery'
+import './ShopHome.scss'
 
 const ShopHome = () => {
   const handleOnShopBackground = () => {

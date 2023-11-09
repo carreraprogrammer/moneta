@@ -56,7 +56,7 @@ nav.navhidde {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url('../resources/Images/mobileMenuBg.gif');
+  background: url('../assets/Images/mobileMenuBg.gif');
   background-size: contain;
   font-size: 2.5rem;
   z-index: 0;
@@ -99,7 +99,7 @@ nav.navhidde {
 
 @media (min-width: 768px) {
   .navigation {
-    background: url('../resources/Images/tabletMenuBg.gif');
+    background: url('../assets/Images/tabletMenuBg.gif');
     background-size: cover;
   }
 }

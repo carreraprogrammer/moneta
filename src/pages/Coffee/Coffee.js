@@ -1,8 +1,7 @@
 import AOS from 'aos'
-import '../Styles/Coffee.css'
 import { useEffect } from 'react'
-import sandwich from '../resources/Images/SandwichWithBrew.png'
-import Menú from '../components/Menú'
+import sandwich from '../../assets/Images/SandwichWithBrew.png'
+import Menu from '../../components/Menu/Menu'
 import './Coffee.scss'
 
 const Coffee = () => {
@@ -23,7 +22,7 @@ const Coffee = () => {
         <div id='homeGalleryOne' style={{background: `url(${sandwich})`, backgroundSize: 'cover', flexBasis: '100%', backgroundPositionX: 'center', backgroundPositionY: 'center'}}></div>
       </div>
     </div>
-    <Menú />
+    <Menu />
     </>
   )
 }

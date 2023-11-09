@@ -12,7 +12,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  background: url(../resources/Images/parallaxThree.svg);
+  background: url(../assets/Images/parallaxThree.svg);
   background-size: cover;
   max-width: 100%;
   font-family: 'Lato', sans-serif;
@@ -55,7 +55,7 @@ header {
 }
 
 #homeGalleryTwo {
-  background: url(../resources/Images/homeGalleryTwoMobile.png);
+  background: url(../assets/Images/homeGalleryTwoMobile.png);
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -118,7 +118,7 @@ header {
 }
 
 #carouselBtnContainer:hover {
-  background: url('../resources/Images/btnBg.png');
+  background: url('../assets/Images/btnBg.png');
   background-size: contain;
   transform: rotate(5deg);
   background-position: center;
@@ -328,7 +328,7 @@ header {
   width: 70%;
   height: 90%;
   margin-bottom: 5%;
-  background: url(../resources/Images/chemex.png);
+  background: url(../assets/Images/chemex.png);
   background-size: contain;
   border: 4px solid #6d0022;
 }
@@ -376,7 +376,7 @@ header {
    }
 
    #homeGalleryTwo {
-    background: url(../resources/Images/homeGalleryTwo.png);
+    background: url(../assets/Images/homeGalleryTwo.png);
     width: 33.333%;
     height: 100%;
     background-size: cover;
@@ -384,7 +384,7 @@ header {
    }
 
    #homeGalleryOne {
-     background: url('../resources/Images/homeGalleryOne.png');
+     background: url('../assets/Images/homeGalleryOne.png');
      width: 33.333%;
      height: 100%;
      background-size: cover;
@@ -392,7 +392,7 @@ header {
    }
 
    #homeGalleryThree {
-     background: url('../resources/Images/homeGalleryThree.png');
+     background: url('../assets/Images/homeGalleryThree.png');
      width: 33.333%;
      height: 100%;
      background-size: cover;
@@ -435,7 +435,7 @@ header {
   }
   
   #carouselBtnContainer:hover {
-    background: url('../resources/Images/btnBg.png');
+    background: url('../assets/Images/btnBg.png');
     background-size: contain;
     transform: rotate(5deg);
     background-size: cover;

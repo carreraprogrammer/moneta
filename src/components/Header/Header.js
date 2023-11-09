@@ -1,30 +1,66 @@
-import React, {useEffect} from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import frontImage from '../resources/Images/newFrontPage.svg'
-import leaves from '../resources/Images/leaves.png'
-import './Header.scss'
+import React, { useRef } from 'react';
+import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
+import leaves from '../../assets/Images/leaves.png';
+import './Header.scss';
 
 const Header = () => {
-  useEffect(() => {
-      AOS.init({duration: 3000})
-  }, [])
+  const headerRef = useRef(null);
+  const titleRef = useRef(null);
+  const leavesRef = useRef(null);
+  const mLetter = useRef(null);
+  const onetaLetters = useRef(null);
 
-  return(
-    <header className='header' id='header' data-aos='fade-in' >
-      <h1 
-        id='headerTitle'  
-      >
-          <span data-aos="zoom-in-up" data-aos-duration="3000">
-          M
-          </span>
-          <span data-aos="fade-up" data-aos-duration="3000"> 
-          oneta
-          </span></h1> 
-          <img id='frontImage' src={frontImage} style={{objectFit: 'cover'}} alt='coffee dates'/>
-          <img id='leaves' src={leaves} style={{position: 'fixed', top: '0', left: '0%', height: '60%', transition: 'all 3s ease-in-out'}} data-aos='fade-down'  data-aos-duraton='3000' data-aos-anchor-placement='top-top' alt='leaves' />
+  // Header animations
+  const headerAnimations = [
+    {
+      from: { backgroundPosition: 'center center' },
+      to: { backgroundPosition: `center ${200}px` },
+      options: { scrub: 1, trigger: headerRef.current, start: "top center", end: "bottom center" }
+    }
+  ];
+
+  // Title animations
+  const mAnimations = [
+    {
+      from: { scale: 0.5, y: 100, opacity: 0 },
+      to: { duration: 2, scale: 1, y: 0, opacity: 1 },
+      options: {}
+    }
+  ];
+
+  const onetaAnimations = [
+    {
+      from: { y: 100, autoAlpha: 0 },
+      to: { duration: 2, y: 0, autoAlpha: 1 },
+      options: { trigger: titleRef.current, start: "top center", toggleActions: "play none none none" }
+    }
+  ];
+
+  // Leaves animations
+  const leavesAnimations = [
+    {
+      from: { yPercent: 0, opacity: 0 },
+      to: { opacity: 1, yPercent: 50, scrub: 1 },
+      options: { scrub: true, trigger: leavesRef.current, start: "bottom center", toggleActions: "play none none none" }
+    }
+  ];
+  
+
+  useScrollTriggerAnimations(leavesRef, leavesAnimations);
+  useScrollTriggerAnimations(mLetter, mAnimations);
+  useScrollTriggerAnimations(onetaLetters, onetaAnimations);
+  useScrollTriggerAnimations(headerRef, headerAnimations);
+
+
+  return (
+    <header className='header' id='header' ref={headerRef}>
+      <h1 id='headerTitle' ref={titleRef}>
+        <span id='#title-m' ref={mLetter}>M</span>
+        <span id='#title-oneta' ref={onetaLetters}>oneta</span>
+      </h1>
+      <img id='leaves' src={leaves} alt='leaves' ref={leavesRef} />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
