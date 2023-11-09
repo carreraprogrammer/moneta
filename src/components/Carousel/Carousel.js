@@ -1,9 +1,9 @@
-import carousel from '../resources/Images/carouselOne.png'
+import carousel from '../assets/Images/carouselOne.png'
 import $ from 'jquery'
 import React, {useEffect} from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import sandwich from '../resources/Images/carouselSandwich.png'
+import sandwich from '../assets/Images/carouselSandwich.png'
 import { NavLink } from 'react-router-dom';
 import './Carousel.scss'
 
