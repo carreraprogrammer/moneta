@@ -17,6 +17,7 @@ import { useEffect } from 'react'
 import Gallery from "../../components/Gallery/Gallery";
 import Carousel from "../../components/Carousel/Carousel";
 import AboutAbstract from "../../section/AboutAbstract/AboutAbstract";
+import ShopHome from "../../components/ShopHome/ShopHome";
 
 const Home = () => {
     useEffect(() => {
@@ -30,6 +31,7 @@ const Home = () => {
         <Gallery />
         <Carousel />
         <AboutAbstract />
+        <ShopHome />
       </div>
     )
 }
