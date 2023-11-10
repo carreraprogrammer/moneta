@@ -1,53 +1,39 @@
-import shopBtn from '../assets/Images/shopHomeBtn.png'
+import React, { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import shopBackground from '../assets/Images/backgroundShop.svg'
-import $ from 'jquery'
-import './ShopHome.scss'
+import { ReactComponent as ShopBtn } from '../../assets/Images/shopHomeBtn.svg';
+import shopArticles from '../../assets/Images/shopArticles.png';
+import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
+import { fadeInAnimation, rotateAnimation, unveilImageAnimation } from '../../animations/animations';
+import './ShopHome.scss';
 
 const ShopHome = () => {
-  const handleOnShopBackground = () => {
-    $('#shopSection').css({
-      background: `url(${shopBackground})`,
-      backgroundColor: '#ea984e',
-      backgroundSize: 'cover',
-      backgroundPosition:'center',
-      transition: 'all 5s ease-in-out'
-    })
-    $('#shopImage').css({
-      transform: 'rotate(-2deg) translateY(-9%)',
-      transition: 'all 0.5s ease-in-out'
-    })
-    $('.nav').addClass('navhidde')
-  }
+  // Refs for each element
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const imageRef = useRef(null);
+  const navLinkRef = useRef(null);
 
-  const handleLeaveShopBackground = () => {
-    $('#shopSection').css({
-      background: '',
-      backgroundColor: '#ea984e',
-      backgroundSize: 'cover',
-      backgroundPosition:'center',
-      transition: 'all 5s ease-in-out'
-    })
-    $('#shopImage').css({
-      transform: 'rotate(0deg) translateY(-9%)'
-    })
-  }
+  // Applying the hook
+  useScrollTriggerAnimations(titleRef, [fadeInAnimation]);
+  useScrollTriggerAnimations(descriptionRef, [fadeInAnimation]);
+  useScrollTriggerAnimations(imageRef, [unveilImageAnimation]);
+  useScrollTriggerAnimations(navLinkRef, [rotateAnimation]);
 
   return (
-  <div id='shopSection'>
-    <h1 data-aos='fade-up' id='shopTitle'>SHOP</h1>
-      <div id='shopImage' data-aos='imageAnimation' data-aos-duration="2000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-anchor='#imageHomeContainer'>
-        <NavLink id='shopBtn' to='/Shop'>
-          <p  data-aos="fade-in" data-aos-duration="1000" id='shopBtnText' data-aos-anchor-placement="center-center"  data-aos-anchor='#imageHomeContainer' onMouseOver={() => {
-            $('#shopButtonImage').css({animation: 'rotation 1s infinite linear'}); handleOnShopBackground()
-          }} onMouseLeave={()=> {
-            $('#shopButtonImage').css({animation: 'none'}); handleLeaveShopBackground()
-          }} style={{cursor: 'pointer', fontWeight: 'bold'}}>Tienda</p>
-          <img onMouseOver={handleOnShopBackground} onMouseLeave={handleLeaveShopBackground} id='shopButtonImage' src={shopBtn} alt='shopBtn' data-aos="rotate-c"  data-aos-duration="2000" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" data-aos-delay='100' />
+    <div id='shopSection'>
+      <h1 id='shopTitle' ref={titleRef}>Nuestra Tienda</h1>
+      <p id='shopDescription' ref={descriptionRef}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+      </p>
+      <div id='shopImageContainer' >
+        <img src={shopArticles} alt='shopArticles' ref={imageRef}/>
+        <NavLink id='shopBtn' to='/Shop' >
+          <p id='shopBtnText'>Tienda</p>
+          <ShopBtn id='shopBtnImage' ref={navLinkRef}/>
         </NavLink>
       </div>
-  </div>
-  )
-}
+    </div>
+  );
+};
 
-export default ShopHome
+export default ShopHome;
