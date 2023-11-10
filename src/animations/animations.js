@@ -68,7 +68,7 @@ export const imageUnfold = {
 export const unveilImageAnimation = {
   from: { scale: 1.2, filter: 'brightness(0)' },
   to: { scale: 1, filter: 'brightness(1)', duration: 1 },
-  options: { start: 'top bottom', end: 'bottom center', toggleActions: "restart pause reverse pause"}
+  options: { scrub: 1, start: 'top bottom', end: 'center bottom', toggleActions: "restart pause reverse pause"}
 };
 
 export const moveImageUp = {
