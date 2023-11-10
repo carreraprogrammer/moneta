@@ -13,9 +13,9 @@ const Header = () => {
   // Header animations
   const headerAnimations = [
     {
-      from: { backgroundPosition: `center ${50}px` },
-      to: { backgroundPosition: `center ${250}px` },
-      options: { scrub: 1, trigger: headerRef.current, start: "top center", end: "bottom center" }
+      from: { backgroundPosition: `center ${0}px` },
+      to: { backgroundPosition: `center ${200}px` },
+      options: { scrub: 1, trigger: headerRef.current, start: "70% center", end: "bottom center" }
     }
   ];
 

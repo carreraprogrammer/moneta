@@ -4,9 +4,7 @@ import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimat
 
 const Gallery = () => {
   // Create a ref for each gallery element
-  const galleryOneRef = useRef(null);
-  const galleryTwoRef = useRef(null);
-  const galleryThreeRef = useRef(null);
+  const galleryContainer = useRef(null);
 
   // Define the animations for the fade-in effect
   const fadeInAnimations = [
@@ -14,24 +12,21 @@ const Gallery = () => {
       from: { autoAlpha: 0 },
       to: { autoAlpha: 1 },
       options: {
-        scrub: true,
-        trigger: galleryOneRef.current,
-        start: "top bottom",
+        trigger: galleryContainer.current,
+        start: "top 60%",
         end: "center center"
       },
     },
   ];
 
-  useScrollTriggerAnimations(galleryOneRef, fadeInAnimations);
-  useScrollTriggerAnimations(galleryTwoRef, fadeInAnimations);
-  useScrollTriggerAnimations(galleryThreeRef, fadeInAnimations);
+  useScrollTriggerAnimations(galleryContainer, fadeInAnimations);
 
   return (
     <div id='homeGallery'>
-      <div id='galleryContainer'>
-        <div id='homeGalleryOne' ref={galleryOneRef}></div>
-        <div id='homeGalleryTwo' ref={galleryTwoRef}></div>
-        <div id='homeGalleryThree' ref={galleryThreeRef}></div>
+      <div id='galleryContainer' ref={galleryContainer}>
+        <div id='homeGalleryOne'></div>
+        <div id='homeGalleryTwo'></div>
+        <div id='homeGalleryThree'></div>
       </div>
     </div>
   );
