@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 import { ReactComponent as CoffeePlant } from '../../assets/Images/coffeePlant1.svg'
 import { ReactComponent as CoffeePlant2 } from '../../assets/Images/coffeePlant2.svg'
-import { fadeIn, imageUnfold, titleZoomIn, moveImageUp } from '../../animations/animations'
+import { fadeInAnimation, imageUnfold, titleZoomIn, moveImageUp } from '../../animations/animations'
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations'
 
 const AboutAbstract = () => {
@@ -18,7 +18,7 @@ const AboutAbstract = () => {
 
   useScrollTriggerAnimations(description, [imageUnfold])
   useScrollTriggerAnimations(title, [titleZoomIn])
-  useScrollTriggerAnimations(container, [fadeIn])
+  useScrollTriggerAnimations(container, [fadeInAnimation])
   useScrollTriggerAnimations(image, [moveImageUp])
 
   return (
