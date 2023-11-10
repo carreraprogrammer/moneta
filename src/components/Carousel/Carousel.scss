@@ -1,0 +1,74 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins.scss';
+@import '../../Styles/animations.scss';
+
+// MOBILE FIRST STYLES
+
+#carouselOne {
+  overflow: auto;
+  width: auto;
+  height: 20vh;
+  display: flex;
+  padding: 10% 0;
+  width: 200%;
+  overflow: hidden;
+  margin: 5% 0;
+
+  #carouselBtnContainer {
+    min-width: 100px;
+    width: 25%;
+    @include center-row;
+    position: relative;
+
+    a {
+      height: 50px;
+      width: 50px;
+      @include center-row;
+      border-radius: 100% !important;
+      color: black;
+      @include basic-button;
+      z-index: 1;
+    }
+
+    #carouselCoffeeBeans {
+      position: absolute;
+      transition: transform .1s ease-in-out;
+
+      * {
+        fill: $sandy-brown-500;
+      }
+    }
+  }
+
+  * {
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #carouselOne {
+    padding: 0;
+    width: auto;
+    width: 120%;
+    height: 20vh;
+
+    * {
+      margin: 0 1%;
+    }
+
+    #carouselBtnContainer {
+      min-width: 150px;
+      
+      a {
+        min-height: 100px;
+        min-width: 100px;
+      }
+
+      &:hover {
+        #carouselCoffeeBeans {
+          animation: rotate 4s linear infinite;
+        }
+      }
+    }
+  }
+}

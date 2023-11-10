@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const useScrollTriggerAnimations = (ref, animations) => {
   useEffect(() => {
-    const triggers = animations.map(animation => {
+    animations.map(animation => {
       const { from, to, options } = animation;
       return gsap.fromTo(ref.current, from, {
         ...to,
@@ -17,7 +17,7 @@ const useScrollTriggerAnimations = (ref, animations) => {
       });
     });
 
-    return triggers
+    
   }, [ref, animations]);
 };
 

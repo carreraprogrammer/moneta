@@ -1,65 +1,47 @@
-import carousel from '../assets/Images/carouselOne.png'
-import $ from 'jquery'
-import React, {useEffect} from 'react'
-import AOS from 'aos'
+import carousel from '../../assets/Images/carouselOne.png'
+import React, { useRef } from 'react'
 import 'aos/dist/aos.css'
-import sandwich from '../assets/Images/carouselSandwich.png'
+import sandwich from '../../assets/Images/carouselSandwich.png'
 import { NavLink } from 'react-router-dom';
 import './Carousel.scss'
 
-const Carousel = () => {
-  useEffect(() => {
-    AOS.init({duration: 500})
-  }, [])
-  
-  const stopCarousel = () => {
-      $('#carouselOne > :nth-child(1)').css({
-          transform: 'translateX(0%)',
-          transition: 'all 20s ease-in-out'
-        })
-      $('#carouselOne > :nth-child(3)').css({
-          transform: 'translateX(-3%)',
-          transition: 'all 40s ease-in-out'
-        })
-      $('#carouselOne > :nth-child(2)').css({
-          transform: 'translateX(-9%)',
-          transition: 'all 40s ease-in-out'
-        })
-      $('#carouselOne > :nth-child(4)').css({
-          transform: 'translateX(-9%)',
-          transition: 'all 40s ease-in-out'
-      })
-    }
+import {ReactComponent as CofeeBeans} from '../../assets/Images/coffee_beans.svg'
 
-    const startCarousel = () => {
-      $('#carouselOne > :nth-child(1)').css({
-        transform: 'translateX(3%)',
-        transition: 'all 5s ease-in-out'
-      })
-      $('#carouselOne > :nth-child(4)').css({
-        transform: 'translateX(3%)',
-        transition: 'all 5s ease-in-out'
-      })
-      $('#carouselOne > :nth-child(2)').css({
-        transform: 'translateX(12%)',
-        transition: 'all 5s ease-in-out'
-      })
-      $('#carouselOne > :nth-child(3)').css({
-        transform: 'translateX(12%)',
-        transition: 'all 5s ease-in-out'
-      })
-    }
-  
+import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
+
+const Carousel = () => {
+  const coffeeBeans = useRef(null)
+  const carouselOne = useRef(null)
+
+  const coffeeBeansAnimations = [{
+    from: {rotate: 0},
+    to: { rotate: 360},
+    options: { scrub: 3, trigger: carouselOne.current, start: "-200% center", end: "200% center",toggleActions: "restart pause reverse pause"}
+  }]
+
+  const carouselOneAnimations = [{
+    from: { x: 0},
+    to: { x: -300 },
+    options: { scrub: 3, trigger: carouselOne.current, start: "-200% center", end: "200% center",
+    toggleActions: "restart pause reverse pause"}
+  }]
+
+  useScrollTriggerAnimations(coffeeBeans, coffeeBeansAnimations)
+  useScrollTriggerAnimations(carouselOne, carouselOneAnimations)
+
   return (
-  <div id='carouselOne' onMouseLeave={startCarousel} onMouseOver={stopCarousel} data-aos='fade-ind'>
-    <img className='carouselOneImg'  id='carouselImgOne' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='1000' />
-    <div id='carouselSandwichContainer'  data-aos='carouselBtnRight' data-aos-anchor-placement="center-center" data-aos-duration='1000'>
+  <div id='carouselOne' ref={carouselOne}>
+    <img className='carouselOneImg'  id='carouselImgOne' src={carousel} alt='carouselImage' />
+    <div id='carouselSandwichContainer'>
       <img id='carouselSandwich' alt='sandwich' src={sandwich} />
     </div>
-    <div id='carouselBtnContainer' data-aos='carouselBtnRight' data-aos-anchor-placement="center-center" data-aos-duration='2000'>
-      <NavLink to='/Coffee'  id='carouselBtn' >Menú</NavLink>
+    <div id='carouselBtnContainer'>
+      <NavLink to='/Coffee'  id='carouselBtn' >
+        Menú
+      </NavLink>
+      <CofeeBeans id='carouselCoffeeBeans' ref={coffeeBeans} />
     </div>
-    <img className='carouselOneImg' src={carousel} alt='carousel'  data-aos='carouselRight' data-aos-anchor-placement="center-center" data-aos-duration='1000' />
+    <img className='carouselOneImg' src={carousel} alt='carousel' />
   </div>
   )
 }

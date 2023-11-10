@@ -13,8 +13,8 @@ const Header = () => {
   // Header animations
   const headerAnimations = [
     {
-      from: { backgroundPosition: 'center center' },
-      to: { backgroundPosition: `center ${200}px` },
+      from: { backgroundPosition: `center ${50}px` },
+      to: { backgroundPosition: `center ${250}px` },
       options: { scrub: 1, trigger: headerRef.current, start: "top center", end: "bottom center" }
     }
   ];
@@ -40,12 +40,11 @@ const Header = () => {
   const leavesAnimations = [
     {
       from: { yPercent: 0, opacity: 0 },
-      to: { opacity: 1, yPercent: 50, scrub: 1 },
-      options: { scrub: true, trigger: leavesRef.current, start: "bottom center", toggleActions: "play none none none" }
+      to: { opacity: 1, yPercent: 70, scrub: 1 },
+      options: { scrub: 3, trigger: leavesRef.current, start: "bottom center", toggleActions: "play none none none" }
     }
   ];
   
-
   useScrollTriggerAnimations(leavesRef, leavesAnimations);
   useScrollTriggerAnimations(mLetter, mAnimations);
   useScrollTriggerAnimations(onetaLetters, onetaAnimations);

@@ -1,0 +1,93 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins.scss';
+@import '../../Styles/animations.scss';
+
+.aboutAbstract {
+  height: 100vh;
+  @include center-row;
+  width: 90%;
+  margin: auto;
+  border: 1px solid black;
+  padding: 0 2%;
+
+  div {
+    flex-basis: 50%;
+    width: 50%;
+    @include center-column;
+    padding: 2% 0;
+  }
+
+  .imageContainer {
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .descriptionContainer {
+    justify-content: space-around;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .title {
+      font-size: 3rem;
+      padding-bottom: 5%;
+      border-bottom: 1px solid black;
+      width: 100%;
+      text-align: center;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+
+    #aboutBtn {
+      @include basic-button;
+      @include center-row;
+      height: 50px;
+      width: 150px;
+      font-size: 1rem;
+    }
+
+    #coffeePlant,
+    #coffeePlant2 {
+      opacity: 0;
+      transition: .5s ease-in-out;
+      position: absolute;
+      animation: moveLeftRight 2s ease-in-out infinite;
+      * {
+        fill: $sandy-brown-500;
+      }
+    }
+
+    #coffeePlant {
+      top: -2%;
+      left: -2%;
+      transform: rotate(180deg) translateY(100%);
+    }
+
+    #coffeePlant2 {
+      bottom: -2%;
+      right: 0%;
+      transform: rotate(-90deg) translateY(-100%);
+    }
+
+    &:hover {
+      #coffeePlant,
+      #coffeePlant2 {
+        opacity: 1;
+      }
+
+      #coffeePlant {
+        transform: rotate(180deg) translateY(0%);   
+      }
+
+      #coffeePlant2 {
+        transform: rotate(-90deg) translateY(0%);
+      }
+    }
+  }
+}

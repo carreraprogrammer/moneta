@@ -1,41 +1,40 @@
-import $ from 'jquery'
-import AOS from 'aos'
-import { useEffect } from 'react'
-import './Gallery.scss'
+import React, { useRef } from 'react';
+import './Gallery.scss';
+import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
 
 const Gallery = () => {
-    useEffect(() => {
-        AOS.init({duration: 2000})
-    }, [])
+  // Create a ref for each gallery element
+  const galleryOneRef = useRef(null);
+  const galleryTwoRef = useRef(null);
+  const galleryThreeRef = useRef(null);
 
-    const startCarousel = () => {
-        $('#carouselOne > :nth-child(1)').css({
-          transform: 'translateX(-3%)',
-          transition: 'all 5s ease-in-out'
-        })
-        $('#carouselOne > :nth-child(4)').css({
-          transform: 'translateX(-3%)',
-          transition: 'all 5s ease-in-out'
-        })
-        $('#carouselOne > :nth-child(2)').css({
-          transform: 'translateX(-12%)',
-          transition: 'all 5s ease-in-out'
-        })
-        $('#carouselOne > :nth-child(3)').css({
-          transform: 'translateX(-12%)',
-          transition: 'all 5s ease-in-out'
-        })
-      }
+  // Define the animations for the fade-in effect
+  const fadeInAnimations = [
+    {
+      from: { autoAlpha: 0 },
+      to: { autoAlpha: 1 },
+      options: {
+        scrub: true,
+        trigger: galleryOneRef.current,
+        start: "top bottom",
+        end: "center center"
+      },
+    },
+  ];
 
-  return(
-   <div id='homeGallery'>
-    <div id='galleryContainer' data-aos='fade-in' data-aos-anchor-place='center-center' data-aos-easing="ease-in-sine"  data-aos-duration='2000' onMouseOver={startCarousel}>
-      <div id='homeGalleryOne'></div>
-      <div id='homeGalleryTwo'></div>
-      <div id='homeGalleryThree'></div>
+  useScrollTriggerAnimations(galleryOneRef, fadeInAnimations);
+  useScrollTriggerAnimations(galleryTwoRef, fadeInAnimations);
+  useScrollTriggerAnimations(galleryThreeRef, fadeInAnimations);
+
+  return (
+    <div id='homeGallery'>
+      <div id='galleryContainer'>
+        <div id='homeGalleryOne' ref={galleryOneRef}></div>
+        <div id='homeGalleryTwo' ref={galleryTwoRef}></div>
+        <div id='homeGalleryThree' ref={galleryThreeRef}></div>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

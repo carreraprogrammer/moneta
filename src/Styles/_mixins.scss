@@ -1,0 +1,56 @@
+@import 'variables';
+
+@mixin center-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin basic-button {
+  background-color: $bordeaux-500;
+  color: $white;
+  border-radius: 12px;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    background-color: $bordeaux-600;
+    transform: scale(1.05)
+  }
+
+  &:active {
+    background-color: $bordeaux-700;
+  }
+
+  &:disabled {
+    background-color: $bordeaux-300;
+    color: $bordeaux-700;
+  }
+}
+
+@mixin outline-button {
+  border: 1px solid $bordeaux-700;
+  background-color: $white;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $bordeaux-50;
+  }
+
+  &:active {
+    background-color: $bordeaux-100;
+  }
+
+  &:disabled {
+    background-color: $white;
+    color: $bordeaux-300;
+    border: 1px solid $bordeaux-300;
+  }
+}

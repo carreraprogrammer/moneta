@@ -1,0 +1,64 @@
+@import '../../Styles/variables.scss';
+
+// MOBILE FIRST STYLES
+#homeGallery {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0;
+  background-color: $sandy-brown-50;
+
+  #galleryContainer {
+    height: 90%;
+    width: 90%;
+    border: 4px solid black;
+    display: flex;
+  }
+
+  #homeGalleryTwo {
+    background: url('../../assets/Images/homeGalleryTwoMobile.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position-y: 50%;
+  }
+}
+
+// DESKTOP STYLES
+@media (min-width: 1025px) {
+  #homeGallery {
+    height: 100vh;
+
+    #galleryContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 80%;
+
+      #homeGalleryOne, #homeGalleryTwo, #homeGalleryThree {
+        width: auto;
+        height: 100%;
+        background-size: 50%;
+        border: 1px solid black;
+      }
+  
+      #homeGalleryOne {
+        background: url('../../assets/Images/homeGalleryOne.png');
+        background-position: center;
+      }
+  
+      #homeGalleryTwo {
+        background: url('../../assets/Images/homeGalleryTwo.png');
+        background-position: right;
+      }
+  
+      #homeGalleryThree {
+        background: url('../../assets/Images/homeGalleryThree.png');
+        background-position-y: top;
+      }
+    }
+
+    }
+}
+

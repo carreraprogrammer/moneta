@@ -1,15 +1,9 @@
-// Variables (en caso de que algunos valores se repitan y puedan ser extraídos)
-$font-family-lato: 'Lato', sans-serif;
-$header-height: 50vh;
-$header-font-size: 3rem;
-$header-background-image: url('../../assets/Images/parallaxThree.svg');
-$border-default: 1px solid black;
+@import '../../Styles/variables';
 
 // Header styles
 .header {
   width: 100%;
   height: $header-height;
-  margin: 0 0 10% 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,10 +11,9 @@ $border-default: 1px solid black;
   background: $header-background-image;
   background-size: cover;
   max-width: 100%;
-  font-family: $font-family-lato;
+  font-family: $main-font;
   padding-top: 10vh;
-  border: $border-default;
-  overflow: hidden;
+  padding: 5% 0;
 
   // Anidación para #headerTitle
   #headerTitle {
@@ -31,12 +24,13 @@ $border-default: 1px solid black;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    text-transform: uppercase;
   }
 
   #leaves {
     width: 20%;
     position: absolute;
-    left: 5%;
+    right: 5%;
     top: 5%;
   }
 }

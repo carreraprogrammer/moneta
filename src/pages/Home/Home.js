@@ -1,6 +1,6 @@
 /* COMPONENTS */
 
-import Header from "../../components/Header/Header";
+import Header from "../../section/Header/Header";
 
 /* STYLES */
 
@@ -14,7 +14,9 @@ import 'aos/dist/aos.css'
 /* HOOKS */
 
 import { useEffect } from 'react'
-
+import Gallery from "../../components/Gallery/Gallery";
+import Carousel from "../../components/Carousel/Carousel";
+import AboutAbstract from "../../section/AboutAbstract/AboutAbstract";
 
 const Home = () => {
     useEffect(() => {
@@ -25,7 +27,9 @@ const Home = () => {
     return(
       <div id="homeContainer">
         <Header />
-  
+        <Gallery />
+        <Carousel />
+        <AboutAbstract />
       </div>
     )
 }
