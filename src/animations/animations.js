@@ -4,7 +4,7 @@
 export const fadeInAnimation = {
   from: { opacity: 0, y: -30 },
   to: { opacity: 1, y: 0 },
-  options: { duration: 1, toggleActions: "restart pause pause pause", start: "top center"}
+  options: { duration: 1, toggleActions: "restart pause pause pause", start: "top bottom"}
 };
 
 export const rotateAnimation = {
