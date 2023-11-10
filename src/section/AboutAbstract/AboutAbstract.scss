@@ -20,6 +20,8 @@
 
   .imageContainer {
     height: 100%;
+    overflow: hidden;
+    padding: 5%;
 
     img {
       height: 100%;
