@@ -1,26 +1,28 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom';
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Shop from "./pages/Shop/Shop";
-import Navbar from './components/Navbar/Navbar'
-import Coffee from "./pages/Coffee/Coffee";
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
+// Lazy loading de las páginas
+const Home = React.lazy(() => import("./pages/Home/Home"));
+const About = React.lazy(() => import("./pages/About/About"));
+const Shop = React.lazy(() => import("./pages/Shop/Shop"));
+const Coffee = React.lazy(() => import("./pages/Coffee/Coffee"));
+const NotFound = React.lazy(() => import("./pages/NotFound/NotFound"));
 
+const App = () => {
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/shop' element={<Shop />} />
+          <Route path='/coffee' element={<Coffee />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+    </React.Suspense>
+  );
+}
 
- const App = () => {
-    return (
-        <>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/About' element={<About />} />
-            <Route path='/Shop' element={<Shop />} />
-            <Route path='/Coffee' element={<Coffee />} />
-          </Routes>
-        </>
-    )
- }
-
- export default App
+export default App;
