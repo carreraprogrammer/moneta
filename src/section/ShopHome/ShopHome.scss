@@ -1,0 +1,130 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+@import '../../Styles/animations.scss';
+
+// MOBILE FIRST STYLES
+
+#shopSection {
+  width: 100%;
+  background-color: black;
+  margin: 5% 0 0 0;
+  padding: 10% 0;
+  @include center-column;
+
+  #shopTitle {
+    font-size: 3rem;
+    color: $bordeaux-500;
+    padding-bottom: 5%;
+    border-bottom: 1px solid $bordeaux-500;
+    margin-bottom: 5%;
+  }
+
+  #shopDescription {
+    font-size: 1rem;
+    color: $white;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 5%;
+  }
+
+  #shopImageContainer {
+    height: auto;
+    width: 90%;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      max-width: 100%;
+    }
+
+    #shopBtn {
+      height: 100px;
+      width: 100px;
+      @include center-row;
+      position: absolute;
+      bottom: -5%;
+      right: -5%;
+
+      &:hover {
+        #shopBtnImage {
+          transform: scale(1.1);
+          animation: rotate 5s infinite;
+          
+          * {
+            fill: $bordeaux-800;
+          }
+        }
+
+        #shopBtnText {
+          transform: scale(1.1);
+          color: $sandy-brown-400;
+        }
+      }
+  
+      #shopBtnText {
+        position: absolute;
+        z-index: 1;
+        color: $white;
+      }
+  
+      #shopBtnImage {
+        position: absolute;
+        z-index: 0;
+        max-height: 100%;
+
+        * {
+          fill: $bordeaux-700;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #shopSection {
+    padding: 5% 0;
+  
+    #shopTitle {
+      font-size: 3rem;
+      color: $bordeaux-500;
+      padding-bottom: 2%;
+      width: 50%;
+      text-align: center;
+      border-bottom: 1px solid $bordeaux-500;
+      margin-bottom: 5%;
+    }
+  
+    #shopImageContainer {
+      height: auto;
+      width: auto;
+      position: relative;
+  
+      img {
+        max-width: 100%
+      }
+  
+      #shopBtn {
+        height: 150px;
+        width: 150px;
+        top: -5%;
+        right: -5%;
+    
+        #shopBtnText {
+          position: absolute;
+          z-index: 1;
+          color: $white;
+        }
+    
+        #shopBtnImage {
+          position: absolute;
+          z-index: 0;
+          max-height: 100%;
+  
+          * {
+            fill: $bordeaux-700;
+          }
+        }
+      }
+    }
+  }  
+}
