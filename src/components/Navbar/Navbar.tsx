@@ -1,29 +1,32 @@
+
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
 import './Navbar.scss';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = () => {
-  const navbarRef = useRef(null);
-  const [navActive, setNavActive] = useState(false);
+const Navbar: React.FC = () => {
+  const navbarRef = useRef<HTMLElement | null>(null);
+  const [navActive, setNavActive] = useState<boolean>(false);
 
-  const handleNavigation = () => {
+  const handleNavigation = (): void => {
     setNavActive(!navActive);
   };
 
   useEffect(() => {
-    gsap.to(navbarRef.current, {
-      scrollTrigger: {
-        trigger: navbarRef.current,
-        start: "top top",
-        end: "bottom top",
-        toggleClass: { targets: navbarRef.current, className: "navhidde" },
-        scrub: true
-      }
-    });
+    if (navbarRef.current) {
+      gsap.to(navbarRef.current, {
+        scrollTrigger: {
+          trigger: navbarRef.current,
+          start: "top top",
+          end: "bottom top",
+          toggleClass: { targets: navbarRef.current, className: "navhidde" },
+          scrub: true
+        }
+      });
+    }
   }, []);
   
   return(
@@ -40,7 +43,7 @@ const Navbar = () => {
         <span className={`burgerLine ${navActive ? 'burgerActive' : ''}`}></span>
       </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar;
