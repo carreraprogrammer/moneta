@@ -1,10 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, RefObject } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useScrollTriggerAnimations = (ref, animations) => {
+interface Animation {
+  from: gsap.TweenVars;
+  to: gsap.TweenVars;
+  options: ScrollTrigger.Vars;
+}
+
+const useScrollTriggerAnimations = (
+  ref: RefObject<Element>,
+  animations: Animation[]
+) => {
   useEffect(() => {
     animations.map(animation => {
       const { from, to, options } = animation;
@@ -16,8 +25,6 @@ const useScrollTriggerAnimations = (ref, animations) => {
         }
       });
     });
-
-    
   }, [ref, animations]);
 };
 
