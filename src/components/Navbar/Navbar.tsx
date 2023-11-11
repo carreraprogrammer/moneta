@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.scss';
@@ -16,17 +15,22 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    if (navbarRef.current) {
-      gsap.to(navbarRef.current, {
-        scrollTrigger: {
-          trigger: navbarRef.current,
-          start: "top top",
-          end: "bottom top",
-          toggleClass: { targets: navbarRef.current, className: "navhidde" },
-          scrub: true
-        }
-      });
-    }
+    const nav = navbarRef.current;
+  
+    const showAnim = gsap.from(nav, {
+      yPercent: -100,
+      paused: true,
+      duration: 0.2,
+    }).progress(1);
+  
+    ScrollTrigger.create({
+      trigger: nav,
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse();
+      },
+    });
   }, []);
   
   return(
