@@ -3,12 +3,12 @@ import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimat
 import leaves from '../../assets/Images/leaves.png';
 import './Header.scss';
 
-const Header = () => {
-  const headerRef = useRef(null);
-  const titleRef = useRef(null);
-  const leavesRef = useRef(null);
-  const mLetter = useRef(null);
-  const onetaLetters = useRef(null);
+const Header: React.FC = () => {
+  const headerRef = useRef<HTMLElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const leavesRef = useRef<HTMLImageElement | null>(null);
+  const mLetter = useRef<HTMLSpanElement | null>(null);
+  const onetaLetters = useRef<HTMLSpanElement | null>(null);
 
   // Header animations
   const headerAnimations = [
