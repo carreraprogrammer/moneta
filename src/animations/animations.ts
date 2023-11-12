@@ -9,7 +9,7 @@ interface AnimationOptions {
   ease?: string;
 }
 
-interface Animation {
+export interface Animation {
   from: Record<string, number | string>;
   to: Record<string, number | string>;
   options: AnimationOptions;
