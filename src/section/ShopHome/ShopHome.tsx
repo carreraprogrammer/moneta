@@ -4,14 +4,14 @@ import { ReactComponent as ShopBtn } from '../../assets/Images/shopHomeBtn.svg';
 import shopArticles from '../../assets/Images/shopArticles.png';
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
 import { fadeInAnimation, rotateAnimation, unveilImageAnimation } from '../../animations/animations';
-import './ShopHome.scss';
+import './ShopHome.scss';// Asegúrate de que la ruta sea correcta
 
-const ShopHome = () => {
+const ShopHome: React.FC = () => {
   // Refs for each element
-  const titleRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const imageRef = useRef(null);
-  const navLinkRef = useRef(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const imageRef = useRef<HTMLImageElement | null>(null);
+  const navLinkRef = useRef<SVGSVGElement | null>(null); // Suponiendo que ShopBtn es un SVG
 
   // Applying the hook
   useScrollTriggerAnimations(titleRef, [fadeInAnimation]);
