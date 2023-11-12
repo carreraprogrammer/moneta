@@ -1,17 +1,17 @@
 @import 'variables';
 
-@mixin center-row {
+@mixin center-row($justify: center, $align: center) {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin center-column {
+@mixin center-column($justify: center, $align: center) {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin basic-button {
