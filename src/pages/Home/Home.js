@@ -14,6 +14,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import AboutAbstract from "../../section/AboutAbstract/AboutAbstract";
 import ShopHome from "../../section/ShopHome/ShopHome";
 import Events from "../../section/Events/Events";
+import Footer from "../../section/Footer/Footer";
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
         <AboutAbstract />
         <ShopHome />
         <Events />
+        <Footer />
       </div>
     )
 }
