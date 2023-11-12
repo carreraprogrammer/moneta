@@ -3,17 +3,18 @@
 // Header styles
 .header {
   width: 100%;
-  height: $header-height;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: $header-font-size;
   background: $header-background-image;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $sandy-brown-50;
+  background-position-y: -100%;
   max-width: 100%;
   font-family: $main-font;
-  padding-top: 10vh;
-  padding: 5% 0;
 
   // Anidación para #headerTitle
   #headerTitle {
