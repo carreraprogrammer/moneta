@@ -14,8 +14,8 @@ const Header: React.FC = () => {
   const headerAnimations = [
     {
       from: { backgroundPosition: `center ${0}px` },
-      to: { backgroundPosition: `center ${200}px` },
-      options: { scrub: 1, trigger: headerRef.current, start: "70% center", end: "bottom center" }
+      to: { backgroundPosition: `center ${100}px` },
+      options: { scrub: true, trigger: headerRef.current, start: "70% center", end: "bottom center" }
     }
   ];
 
