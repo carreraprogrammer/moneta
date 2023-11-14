@@ -99,6 +99,7 @@
   .aboutAbstract {
     @include center-column;
     height: auto;
+    margin: 5% auto;
 
     div {
       width: 100%;
