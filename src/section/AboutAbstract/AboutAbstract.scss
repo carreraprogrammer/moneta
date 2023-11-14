@@ -5,11 +5,11 @@
 .aboutAbstract {
   height: 100vh;
   @include center-row;
-  width: 90%;
+  width: 90vw;
   margin: auto;
   border: 1px solid black;
   padding: 0 2%;
-  background-color: $bordeaux-50;
+  background-color: $sandy-brown-100;
 
   div {
     flex-basis: 50%;
