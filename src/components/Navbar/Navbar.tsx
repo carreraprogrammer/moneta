@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const navbarRef = useRef<HTMLElement | null>(null);
   const [navActive, setNavActive] = useState<boolean>(false);
 
-  const handleNavigation = (): void => {
+  const handleNavigation = () => {
     setNavActive(!navActive);
   };
 
