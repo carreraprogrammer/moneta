@@ -10,7 +10,7 @@ const Menu = () => {
     <div id='tintos'>
       <h2>{tintos[0].subCategory}</h2>
       {tintos.map((tinto) => (
-        <div className='menuProduct'>
+        <div className='menuProduct' key={tinto.name}>
           <h3>{tinto.name}</h3>
           <p>{tinto.productInfo}</p>
         </div>
