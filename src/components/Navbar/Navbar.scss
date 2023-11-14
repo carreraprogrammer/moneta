@@ -48,21 +48,23 @@ nav {
     background-color: black;
     z-index: 1;
     transition: all 0.5s ease-in-out;
-  }
 
-  &.burgerActive {
-    &:nth-child(1) {
-      transform: rotate(45deg);
-      position: fixed;
-    }
-
-    &:nth-child(2) {
-      display: none;
-    }
-
-    &:nth-child(3) {
-      transform: rotate(-45deg);
-      position: fixed;
+    &.burgerActive {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        position: fixed;
+        background-color: $sandy-brown-500;
+      }
+  
+      &:nth-child(2) {
+        display: none;
+      }
+  
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        position: fixed;
+        background-color: $sandy-brown-500;
+      }
     }
   }
 }
@@ -87,6 +89,7 @@ nav {
 
   &.navigationActive, .navActive {
     top: 0;
+    transition: all 1s ease-in-out;
   }
 }
 
