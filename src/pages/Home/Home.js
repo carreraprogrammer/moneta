@@ -21,8 +21,8 @@ const Home = () => {
     return(
       <div id="homeContainer">
         <Header />
-        <Gallery />
         <Carousel />
+        <Gallery />
         <AboutAbstract />
         <ShopHome />
         <Events />
