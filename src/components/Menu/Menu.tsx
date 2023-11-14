@@ -1,16 +1,9 @@
 import React from 'react';
 import menu from '../../assets/Information/Menu';
 import './Menu.scss';
-
-// Define the structure of a menu item
-interface MenuItem {
-  subCategory: string;
-  name: string;
-  productInfo: string;
-}
+import { MenuItem } from '../../assets/Information/Menu';
 
 const Menu: React.FC = () => {
-  // Assuming menu is an array of MenuItem
   const tintos: MenuItem[] = menu.filter((section: MenuItem) => section.subCategory === 'Tintos');
 
   return (

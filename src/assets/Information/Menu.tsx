@@ -1,4 +1,4 @@
-interface MenuItem {
+export interface MenuItem {
   name: string;
   category: string;
   subCategory: string;
