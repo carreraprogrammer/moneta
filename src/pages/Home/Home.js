@@ -8,7 +8,6 @@ import './Home.scss'
 
 /* HOOKS */
 
-import { useEffect } from 'react'
 import Gallery from "../../components/Gallery/Gallery";
 import Carousel from "../../components/Carousel/Carousel";
 import AboutAbstract from "../../section/AboutAbstract/AboutAbstract";
