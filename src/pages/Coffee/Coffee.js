@@ -10,9 +10,11 @@ const Coffee = () => {
         <h1 id='coffeeHeaderTitle'>Café</h1>
         <p id='coffeeHeaderDescription'>Buscamos ser un gran lugar de memoria, donde podamos compartir el amor por el café y la gastronomia nariñense; intercambiar saberes y ser semillas de sueños nuevos</p>
       </div>
-    <div id='homeGallery' style={{background: '#ea984e'}}>
-      <div id='galleryContainer'>
-        <div id='homeGalleryOne' style={{background: `url(${sandwich})`, backgroundSize: 'cover', flexBasis: '100%', backgroundPositionX: 'center', backgroundPositionY: 'center'}}></div>
+    <div id='homeGallery'>
+      <div id='coffeeGalleryContainer'>
+        <div id='coffeeGalleryOne'>
+          <img src={sandwich} alt='sandwich' />
+        </div>
       </div>
     </div>
     <Menu />
