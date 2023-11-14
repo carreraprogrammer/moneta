@@ -1,4 +1,13 @@
-const menu = [
+interface MenuItem {
+  name: string;
+  category: string;
+  subCategory: string;
+  productInfo: string;
+  price: number;
+  image: string;
+}
+
+const menu: MenuItem[] = [
   {
     name: 'Tinto',
     category: 'Bebidas',
