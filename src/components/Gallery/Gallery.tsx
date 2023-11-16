@@ -10,6 +10,7 @@ const Gallery: React.FC = () => {
 
   return (
     <div id='homeGallery'>
+      <h2 id='homeGalleryTitle'>CAFE Y MEMORIA</h2>
       <div id='galleryContainer' ref={galleryContainer}>
         <div id='homeGalleryOne'></div>
         <div id='homeGalleryTwo'></div>
