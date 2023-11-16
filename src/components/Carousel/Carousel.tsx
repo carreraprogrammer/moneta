@@ -5,10 +5,12 @@ import carousel from '../../assets/Images/carouselOne.png'
 import sandwich from '../../assets/Images/carouselSandwich.png'
 import { ReactComponent as CoffeeBeans } from '../../assets/Images/coffee_beans.svg'
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
+import { useMobileScreen } from '../../customHooks/useIsMobile';
 
 const Carousel: React.FC = () => {
   const coffeeBeans = useRef<SVGSVGElement>(null);
   const carouselOne = useRef<HTMLDivElement>(null);
+  const isMobile = useMobileScreen();
 
   const coffeeBeansAnimations = [{
     from: {rotate: 0},
@@ -18,7 +20,7 @@ const Carousel: React.FC = () => {
 
   const carouselOneAnimations = [{
     from: { x: 0},
-    to: { x: -300 },
+    to: { x: isMobile ? -600 : -300 },
     options: { scrub: 3, trigger: carouselOne.current, start: "-200% center", end: "200% center", toggleActions: "restart pause reverse pause"}
   }];
 
