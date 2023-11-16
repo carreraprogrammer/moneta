@@ -6,24 +6,21 @@
 
 #shopSection {
   width: 100%;
-  background-color: black;
-  margin: 5% 0 0 0;
+  background-color: $white;
   padding: 10% 0;
   @include center-column;
 
   #shopTitle {
-    font-size: 3rem;
-    color: $bordeaux-500;
+    color: $black-mate;
     padding-bottom: 5%;
-    border-bottom: 1px solid $bordeaux-500;
+    border-bottom: 1px solid $black-mate;
     margin-bottom: 5%;
   }
 
   #shopDescription {
-    font-size: 1rem;
-    color: $white;
-    width: 60%;
-    text-align: center;
+    color: $black-mate;
+    width: 80%;
+    text-align: left;
     padding-bottom: 5%;
   }
 
@@ -64,7 +61,7 @@
       #shopBtnText {
         position: absolute;
         z-index: 1;
-        color: $white;
+        color: $black-mate;
       }
   
       #shopBtnImage {
@@ -86,11 +83,9 @@
   
     #shopTitle {
       font-size: 3rem;
-      color: $bordeaux-500;
       padding-bottom: 2%;
-      width: 50%;
-      text-align: center;
-      border-bottom: 1px solid $bordeaux-500;
+      width: 80%;
+      text-align: left;
       margin-bottom: 5%;
     }
   
