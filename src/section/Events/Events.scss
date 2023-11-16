@@ -1,0 +1,68 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
+#eventsHome {
+  height: 70vh;
+  width: 100%;
+  background-color: $bordeaux-900;
+
+  #eventBtn {
+    background-color: transparent;
+    border: none;
+    
+    #coffeeWheel {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  #eventsGallery {
+    margin: 0 5%;
+    img {
+      height: 25vh;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #eventsHome {
+    height: 100vh;
+    width: 100%;
+    background-color: $bordeaux-900;
+    position:relative;
+    @include center-column;
+
+    #eventBtn {
+      position: absolute;
+      top: 10%;
+      
+      #coffeeWheel {
+        height: 100px;
+        width: 100px;
+      }
+    }
+
+    #eventsTitle {
+      padding-bottom: 2%;
+      margin: 0 5%;
+      width: 50%;
+      text-align: right;
+      color: $white;
+      border-bottom: 1px solid $white;
+      margin-bottom: 5%;
+      align-self: flex-end
+    }
+
+    #eventsGallery {
+      @include center-row;
+      height: 50vh;
+      margin: auto;
+      width: 80%;
+
+      img {
+        height: 90%;
+        margin: 24px;
+      }
+    }
+  }
+} 
