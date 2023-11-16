@@ -7,7 +7,7 @@
 #carouselOne {
   overflow: auto;
   width: auto;
-  height: 10vh;
+  height: 100px;
   display: flex;
   width: 200%;
   padding: 2% 0;
@@ -48,9 +48,9 @@
 @media (min-width: 1024px) {
   #carouselOne {
     padding: 0;
-    width: auto;
     width: 120%;
-    height: 20vh;
+    max-height: 200px;
+    height: 30vh;
 
     * {
       margin: 0 1%;
@@ -60,8 +60,8 @@
       min-width: 150px;
       
       a {
-        min-height: 100px;
-        min-width: 100px;
+        height: 70px;
+        width: 70px;
       }
 
       &:hover {
