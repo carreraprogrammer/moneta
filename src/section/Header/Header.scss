@@ -28,7 +28,6 @@
     font-size: 10rem;
     font-weight: 400;
     color: $white;
-    font-family: 'Lobster Two', coursive !important;
   }
 
   #leaves {
@@ -42,11 +41,11 @@
 @media (min-width: 768px) {
   .header {
     height: 100vh;
-    font-size: 10rem;
     background-size: cover;
 
     #headerTitle {
       position: static;
+      font-size: 20rem;
       top: 0;
       display: flex;
       align-items: center;
