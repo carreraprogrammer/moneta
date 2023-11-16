@@ -41,14 +41,15 @@
     #galleryContainer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      width: 60%;
-      height: 700px;
+      width: 70%;
+      height: 80%;
+      max-height: 700px;
       border: 1px solid red;
 
       #homeGalleryOne, #homeGalleryTwo, #homeGalleryThree {
         width: auto;
         min-height: 100%;
-        background-size: 100% !important;
+        background-size: cover !important;
         border: 1px solid black;
       }
   
