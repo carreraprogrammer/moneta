@@ -40,7 +40,7 @@ const Header: React.FC = () => {
   const leavesAnimations = [
     {
       from: { yPercent: 0, opacity: 0 },
-      to: { opacity: 1, yPercent: 70, scrub: 1 },
+      to: { opacity: 1, yPercent: 40 },
       options: { scrub: 3, trigger: leavesRef.current, start: "bottom center", toggleActions: "play none none none" }
     }
   ];
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
     <header className='header' id='header' ref={headerRef}>
       <h1 id='headerTitle' ref={titleRef}>
         <span id='#title-m' ref={mLetter}>M</span>
-        <span id='#title-oneta' ref={onetaLetters}>oneta</span>
+        <span id='#title-oneta' ref={onetaLetters}>ONETA</span>
       </h1>
       <img id='leaves' src={leaves} alt='leaves' ref={leavesRef} />
     </header>
