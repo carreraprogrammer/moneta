@@ -11,6 +11,7 @@ import Footer from "../../section/Footer/Footer";
 
 // Importing styles
 import './Home.scss';
+import Contact from '../../section/Contact/Contact';
 
 const Home: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
         <Carousel />
         <ShopHome />
         <Events />
+        <Contact />
         <Footer />
       </div>
     );
