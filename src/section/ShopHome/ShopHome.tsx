@@ -19,6 +19,20 @@ const ShopHome: React.FC = () => {
   useScrollTriggerAnimations(imageRef, [unveilImageAnimation]);
   useScrollTriggerAnimations(navLinkRef, [rotateAnimation]);
 
+  const rotateImage = () => {
+    const imageContainer = document.getElementById('shopImageContainer');
+    if (imageContainer) {
+      imageContainer.style.transform = 'rotate(3deg)';
+    }
+  }
+
+  const rotateImageBack = () => {
+    const imageContainer = document.getElementById('shopImageContainer');
+    if (imageContainer) {
+      imageContainer.style.transform = 'rotate(0deg)';
+    }
+  }
+
   return (
     <div id='shopSection'>
       <h2 id='shopTitle' ref={titleRef}>NUESTRA TIENDA</h2>
@@ -27,7 +41,7 @@ const ShopHome: React.FC = () => {
       </p>
       <div id='shopImageContainer' >
         <img src={shopArticles} alt='shopArticles' ref={imageRef}/>
-        <NavLink id='shopBtn' to='/Shop' >
+        <NavLink id='shopBtn' to='/Shop' onMouseOver={rotateImage} onMouseLeave={rotateImageBack}>
           <p id='shopBtnText'>Tienda</p>
           <ShopBtn id='shopBtnImage' ref={navLinkRef}/>
         </NavLink>
