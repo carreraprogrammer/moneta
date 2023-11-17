@@ -20,7 +20,7 @@ const Carousel: React.FC = () => {
 
   const carouselOneAnimations = [{
     from: { x: 0},
-    to: { x: isMobile ? -600 : -300 },
+    to: { x: isMobile ? -400 : -300 },
     options: { scrub: 3, trigger: carouselOne.current, start: "-200% center", end: "200% center", toggleActions: "restart pause reverse pause"}
   }];
 
