@@ -19,14 +19,15 @@
     width: 80%;
     margin-top: 10%;
 
-    input {
+    .formInputs {
       border: 1px solid white;
       margin: 12px;
-      padding: 5px;
+      padding: 12px;
       border-radius: 12px;
       outline: none;
       background-color: transparent;
       width: 100%;
+      color: white;
 
       &:focus {
         border: 1px solid $sandy-brown-400;
@@ -46,6 +47,23 @@
       &:focus {
         border: 1px solid $sandy-brown-400;
       }
+    }
+
+    .button {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #contactSection {
+    #contactTitle {
+      width: 50%;
+    }
+
+    form {
+      width: 50%;
+      margin-top: 50px;
     }
   }
 }
