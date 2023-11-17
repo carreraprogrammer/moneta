@@ -1,0 +1,51 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
+#contactSection {
+  background-color: $black-mate;
+  height: 50vh;
+  padding: 5% 0;
+  @include center-column;
+
+  #contactTitle {
+    color: $white;
+    padding-bottom: 2%;
+    border-bottom: 1px solid $white;
+    width: 80%;
+  }
+
+  form {
+    @include center-column;
+    width: 80%;
+    margin-top: 10%;
+
+    input {
+      border: 1px solid white;
+      margin: 12px;
+      padding: 5px;
+      border-radius: 12px;
+      outline: none;
+      background-color: transparent;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $sandy-brown-400;
+      }
+    }
+
+    textarea {
+      border: 1px solid white;
+      margin: 12px;
+      padding: 5px;
+      border-radius: 12px;
+      outline: none;
+      background-color: transparent;
+      width: 100%;
+      height: 100px;
+
+      &:focus {
+        border: 1px solid $sandy-brown-400;
+      }
+    }
+  }
+}
