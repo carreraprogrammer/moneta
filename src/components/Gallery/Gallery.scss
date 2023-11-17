@@ -4,7 +4,7 @@
 // MOBILE FIRST STYLES
 #homeGallery {
   @include center-column;
-  height: 40vh;
+  height: 50vh;
   max-height: 1000px;
   width: 100%;
   padding: 2% 0;
@@ -18,8 +18,8 @@
   }
 
   #galleryContainer {
-    max-height: 80%;
-    width: 70vw;
+    height: 90%;
+    width: 80vw;
     border: 4px solid black;
     display: flex;
   }
