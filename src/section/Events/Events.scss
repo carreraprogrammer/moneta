@@ -5,6 +5,18 @@
   height: 70vh;
   width: 100%;
   background-color: $bordeaux-900;
+  padding: 5% 0;
+
+  #eventsTitle {
+    padding-bottom: 2%;
+    margin: 0 5%;
+    width: 50%;
+    text-align: right;
+    color: $white;
+    border-bottom: 1px solid $white;
+    margin-bottom: 5%;
+    align-self: flex-end
+  }
 
   #eventBtn {
     background-color: transparent;
@@ -17,6 +29,9 @@
   }
 
   #eventsGallery {
+    @include center-column;
+    overflow: hidden;
+    height: 50%;
     margin: 0 5%;
     img {
       height: 25vh;
@@ -30,6 +45,7 @@
     width: 100%;
     background-color: $bordeaux-900;
     position:relative;
+    padding: 5% 0;
     @include center-column;
 
     #eventBtn {
@@ -40,17 +56,6 @@
         height: 100px;
         width: 100px;
       }
-    }
-
-    #eventsTitle {
-      padding-bottom: 2%;
-      margin: 0 5%;
-      width: 50%;
-      text-align: right;
-      color: $white;
-      border-bottom: 1px solid $white;
-      margin-bottom: 5%;
-      align-self: flex-end
     }
 
     #eventsGallery {
