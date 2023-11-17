@@ -1,0 +1,14 @@
+@import '../../Styles/variables.scss';
+
+.button {
+  height: 50px;
+  width: 100px;
+  background-color: $bordeaux-500;
+  border: none;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: $bordeaux-700;
+    transform: scale(1.1)
+  }
+}
