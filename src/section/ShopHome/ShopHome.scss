@@ -8,7 +8,7 @@
   width: 100%;
   background-color: $white;
   padding: 10% 0;
-  @include center-column;
+  @include center-column; 
 
   #shopTitle {
     color: $black-mate;
@@ -28,6 +28,7 @@
     height: auto;
     width: 90%;
     position: relative;
+    transition: all 0.5s ease-in-out;
 
     img {
       object-fit: cover;
@@ -57,7 +58,7 @@
           color: $sandy-brown-400;
         }
       }
-  
+    
       #shopBtnText {
         position: absolute;
         z-index: 1;
@@ -92,10 +93,6 @@
       height: auto;
       width: auto;
       position: relative;
-  
-      img {
-        max-width: 100%
-      }
   
       #shopBtn {
         height: 150px;
