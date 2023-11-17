@@ -9,7 +9,7 @@
   width: auto;
   height: 100px;
   display: flex;
-  width: 200%;
+  width: 250%;
   padding: 2% 0;
   overflow: hidden;
   margin: 5% 0;
@@ -32,7 +32,6 @@
 
     #carouselCoffeeBeans {
       position: absolute;
-      transition: transform .1s ease-in-out;
 
       * {
         fill: $sandy-brown-500;
@@ -67,6 +66,7 @@
       &:hover {
         #carouselCoffeeBeans {
           animation: rotate 4s linear infinite;
+          transition: transform .5s ease-in-out;
         }
       }
     }
