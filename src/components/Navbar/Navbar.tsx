@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.scss';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useMobileScreen } from '../../customHooks/useIsMobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar: React.FC = () => {
+  const isMobile = useMobileScreen();
   const navbarRef = useRef<HTMLElement | null>(null);
   const [navActive, setNavActive] = useState<boolean>(false);
 
@@ -23,14 +25,16 @@ const Navbar: React.FC = () => {
       duration: 0.2,
     }).progress(1);
   
-    ScrollTrigger.create({
-      trigger: nav,
-      start: "top top",
-      end: 99999,
-      onUpdate: (self) => {
-        self.direction === -1 ? showAnim.play() : showAnim.reverse();
-      },
-    });
+   if (!isMobile) {
+      ScrollTrigger.create({
+        trigger: nav,
+        start: "top top",
+        end: 99999,
+        onUpdate: (self) => {
+          self.direction === -1 ? showAnim.play() : showAnim.reverse();
+        },
+      });
+    }
   }, []);
   
   return(
