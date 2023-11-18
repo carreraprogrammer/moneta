@@ -67,7 +67,7 @@ nav {
 
 .navigation {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   bottom: 0;
   left: 0;
@@ -77,22 +77,34 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url('../../assets/Images/mobileMenuBg.gif');
   background-size: contain;
   font-size: 2.5rem;
   z-index: 0;
   transition: all 1s ease-in-out;
 
-  &.navigationActive, .navActive {
+  video {
+    visibility: visible;
+    position: absolute;
     top: 0;
-    transition: all 1s ease-in-out;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &.navigationActive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 
 /* TABLETS */
 @media (min-width: 768px) {
   .navigation {
-    background: url('../../assets/Images/tabletMenuBg.gif');
     background-size: cover;
   }
 }
@@ -132,6 +144,10 @@ nav {
     align-items: center;
     background: none;
     padding: 0 5%;
+
+    video {
+      display: none;
+    }
   }
 }
 /*DESKTOP*/
