@@ -4,6 +4,7 @@ import './Navbar.scss';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useMobileScreen } from '../../customHooks/useIsMobile';
+import mobileBg from '../../assets/Images/mobileMenuBg.webm'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,9 @@ const Navbar: React.FC = () => {
         <NavLink className='navigationLinks' to='/Coffee' onClick={handleNavigation}>Café</NavLink>
         <NavLink className='navigationLinks' to='/Shop' onClick={handleNavigation}>Tienda</NavLink>
         <NavLink className='navigationLinks' to='/About' onClick={handleNavigation}>About</NavLink>
+        <video className='navVideo' autoPlay muted loop>
+          <source src={mobileBg} type='video/webm' />
+        </video>
       </ul>
       <div className='burgerMenu' onClick={handleNavigation}>
         <span className={`burgerLine ${navActive ? 'burgerActive' : ''}`}></span>    
