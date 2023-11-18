@@ -1,5 +1,5 @@
 import sandwich from '../../assets/Images/SandwichWithBrew.png'
-import Menu from '../../components/Menu/Menu'
+import Menu from '../../section/Menu/Menu'
 import './Coffee.scss'
 
 const Coffee = () => {
