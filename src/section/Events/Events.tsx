@@ -7,26 +7,34 @@ import { Animation } from '../../animations/animations';
 
 const Events: React.FC = () => {
   const coffeeWheelRef = useRef<HTMLButtonElement | null>(null);
+  const title = useRef<HTMLHeadingElement | null>(null);
 
   const moveXAnimation: Animation = {
     from: { x: 0 },
-    to: { x: '50vw' },
-    options: { scrub: 8, ease: 'linear', start: '-100% center', end: '500% center', toggleActions: 'restart pause reverse pause' }
+    to: { x: '30vw', y: '.2vh' },
+    options: { scrub: 5, ease: 'linear', start: 'top center', end: 'center bottom', toggleActions: 'restart pause reverse pause' }
   };
 
   const rotateWheel: Animation = {
     from: { rotate: 0 },
-    to: { rotate: 1000 },
-    options: { scrub: 5, ease: 'linear', start: '-100% center', end: '600% center', toggleActions: 'restart pause reverse pause' }
+    to: { rotate: 500 },
+    options: { scrub: 5, ease: 'linear', start: 'top center', end: 'bottom center', toggleActions: 'restart pause reverse pause' }
   };
+
+  const incline: Animation = {
+    from: { rotate: 0 },
+    to: { rotate: 1 },
+    options: { scrub: true, ease: 'linear', start: 'top center', end: 'center bottom', toggleActions: 'restart reverse reverse pause' }
+  }
 
   const wheelAnimation: Animation[] = [rotateWheel, moveXAnimation];
 
   useScrollTriggerAnimations(coffeeWheelRef, wheelAnimation);
+  useScrollTriggerAnimations(title, [incline]);
 
   return (
     <div id='eventsHome'>
-      <h2 id='eventsTitle'>EVENTOS</h2>
+      <h2 id='eventsTitle' ref={title}>EVENTOS</h2>
       <button id='eventBtn' ref={coffeeWheelRef}>
         <CoffeeWheel id='coffeeWheel'/>
       </button>
