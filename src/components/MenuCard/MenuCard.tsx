@@ -1,7 +1,11 @@
 import React from 'react';
 import { Category } from '../../assets/Information/Menu';
 
-const MenuCard: React.FC<Category> = ({ category }) => {
+interface MenuCardProps {
+  category: Category;
+}
+
+const MenuCard: React.FC<MenuCardProps> = ({ category }) => {
   return (
     <section className='menuCard'>
       {category.subCategories.map((subCategory, subIndex) => (
