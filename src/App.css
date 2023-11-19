@@ -32,6 +32,11 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
 p {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
