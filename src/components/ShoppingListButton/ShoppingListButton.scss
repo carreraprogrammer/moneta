@@ -1,0 +1,26 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
+#order-button {
+  @include center-column;
+  position: fixed;
+  bottom: 24px; 
+  right: 24px;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  border: 2px solid $sandy-brown-700;
+  cursor: pointer;
+  background-color: $sandy-brown-400;
+  font-weight: 400px;
+  color: $white;
+
+  span {
+    margin-top: 24px;
+    font-size: .7rem;
+  }
+
+  &:hover {
+    background-color: $sandy-brown-500;
+  }
+}
