@@ -14,12 +14,12 @@ export interface Category {
   subCategories: SubCategory[];
 }
 
-export interface MenuTypo {
+export type MenuTypo = Partial<{
   Bebidas: Category;
   Acompañamientos: Category;
   Desayunos: Category;
   Sánduches: Category;
-}
+}>;
 
 
 const menu:MenuTypo = {
@@ -151,7 +151,7 @@ const menu:MenuTypo = {
   Sánduches: {
     subCategories: [
       {
-        name: 'Sandúches',
+        name: 'Sánduches',
         products: [
           { name: 'Pollo ahumado', productInfo: 'en pan de maíz morado', price: 13000, image: '' },
           { name: 'Tocineta ahumada', productInfo: 'en pan de quinoa', price: 13000, image: '' }
