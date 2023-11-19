@@ -12,19 +12,19 @@ const Events: React.FC = () => {
   const moveXAnimation: Animation = {
     from: { x: 0 },
     to: { x: '30vw', y: '.2vh' },
-    options: { scrub: 5, ease: 'linear', start: 'center 30%', end: 'center bottom', toggleActions: 'restart pause reverse pause' }
+    options: { scrub: 3, ease: 'linear', start: 'center center', end: 'btoom top', toggleActions: 'restart pause reverse pause' }
   };
 
   const rotateWheel: Animation = {
     from: { rotate: 0 },
     to: { rotate: 500 },
-    options: { scrub: 5, ease: 'linear', start: 'center 30%', end: 'bottom center', toggleActions: 'restart pause reverse pause' }
+    options: { scrub: 3, ease: 'linear', start: 'center center', end: 'bottom top', toggleActions: 'restart pause reverse pause' }
   };
 
   const incline: Animation = {
     from: { rotate: 0 },
     to: { rotate: 1 },
-    options: { scrub: true, ease: 'linear', start: 'center center', end: 'center bottom', toggleActions: 'restart reverse reverse pause' }
+    options: { scrub: true, ease: 'linear', start: 'center center', end: 'bottom top', toggleActions: 'restart reverse reverse pause' }
   }
 
   const wheelAnimation: Animation[] = [rotateWheel, moveXAnimation];
