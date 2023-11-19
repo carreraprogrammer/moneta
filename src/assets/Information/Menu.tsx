@@ -1,22 +1,28 @@
-export interface MenuItem {
+interface Product {
   name: string;
   productInfo: string;
   price: number;
   image: string;
 }
 
-export interface SubCategory {
+interface SubCategory {
   name: string;
-  products: MenuItem[];
+  products: Product[];
 }
 
 export interface Category {
-  [key: string]: {
-    subCategories: SubCategory[];
-  };
+  subCategories: SubCategory[];
 }
 
-const menu = {
+export interface MenuTypo {
+  Bebidas: Category;
+  Acompañamientos: Category;
+  Desayunos: Category;
+  Sánduches: Category;
+}
+
+
+const menu:MenuTypo = {
   Bebidas: {
     subCategories: [
       {
