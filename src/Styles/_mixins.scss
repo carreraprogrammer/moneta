@@ -57,10 +57,11 @@
 }
 
 @mixin outline-button-sandy {
-  border: 1px solid $sandy-brown-700;
+  border: 1px solid $sandy-brown-400;
   background-color: $white;
   border-radius: 5px;
-  color: $sandy-brown-700;
+  color: $sandy-brown-400;
+  font-weight: 600;
 
   &:hover {
     background-color: $sandy-brown-50;
