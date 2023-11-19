@@ -1,6 +1,8 @@
 import sandwich from '../../assets/Images/SandwichWithBrew.png'
 import Menu from '../../section/Menu/Menu'
 import './Coffee.scss'
+import Contact from '../../section/Contact/Contact'
+import Footer from '../../section/Footer/Footer'
 
 const Coffee = () => {
 
@@ -16,6 +18,8 @@ const Coffee = () => {
         </div>
       </div>
     <Menu />
+    <Contact />
+    <Footer />
     </>
   )
 }
