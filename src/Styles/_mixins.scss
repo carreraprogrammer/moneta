@@ -39,6 +39,7 @@
   border: 1px solid $bordeaux-700;
   background-color: $white;
   border-radius: 5px;
+  color: $bordeaux-700;
 
   &:hover {
     background-color: $bordeaux-50;
@@ -52,5 +53,26 @@
     background-color: $white;
     color: $bordeaux-300;
     border: 1px solid $bordeaux-300;
+  }
+}
+
+@mixin outline-button-sandy {
+  border: 1px solid $sandy-brown-700;
+  background-color: $white;
+  border-radius: 5px;
+  color: $sandy-brown-700;
+
+  &:hover {
+    background-color: $sandy-brown-50;
+  }
+
+  &:active {
+    background-color: $sandy-brown-100;
+  }
+
+  &:disabled {
+    background-color: $white;
+    color: $sandy-brown-300;
+    border: 1px solid $sandy-brown-300;
   }
 }
