@@ -19,9 +19,9 @@ const Coffee = () => {
           <img src={sandwich} alt='sandwich' />
         </div>
       </div>
-    <Menu />
-    <Contact />
-    <Footer />
+      <Menu />
+      <Contact />
+      <Footer />
     </>
   )
 }
