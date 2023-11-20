@@ -1,0 +1,13 @@
+@import "../../Styles/variables.scss";
+@import "../../Styles/mixins.scss";
+
+.featuredProductsContainer {
+  @include center-column;
+  height: 50vh;
+}
+
+@media (min-width: 1024px) {
+  .featuredProductsContainer {
+    height: 80vh;
+  }
+}
