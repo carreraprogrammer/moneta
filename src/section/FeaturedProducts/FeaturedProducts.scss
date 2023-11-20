@@ -3,7 +3,11 @@
 
 .featuredProductsContainer {
   @include center-column;
-  height: 50vh;
+  padding: 2% 0;
+
+  .featuredProductsTitle {
+    @include section-title;
+  }
 }
 
 @media (min-width: 1024px) {
