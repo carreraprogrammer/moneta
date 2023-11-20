@@ -1,0 +1,24 @@
+.productsGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 24px;
+  gap: 24px;
+
+  .productContainer {
+    height: 250px;
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+
+@media (min-width: 1025px) {
+  .productsGridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .productContainer {
+      height: 500px;
+      width: 100%;
+      border: 1px solid black;
+    }
+  }
+}
