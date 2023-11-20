@@ -16,9 +16,7 @@
   }
 
   #homeGalleryTitle {
-    padding-bottom: 2%;
-    width: 80%;
-    border-bottom: 1px solid $black-mate;
+    @include section-title
   }
 
   #galleryContainer {

@@ -11,10 +11,7 @@
   @include center-column; 
 
   #shopTitle {
-    color: $black-mate;
-    padding-bottom: 5%;
-    border-bottom: 1px solid $black-mate;
-    margin-bottom: 5%;
+    @include section-title;
   }
 
   #shopDescription {
