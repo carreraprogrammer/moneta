@@ -7,7 +7,7 @@ const ShopHeader = () => {
       <h1 className="shopHeaderTitle">Shop</h1>
       <p className="shopHeaderDescription">
         Descubre nuestra cuidada selección de productos de café, desde granos selectos hasta accesorios de alta calidad. En nuestra tienda, cada artículo ha sido elegido pensando en los amantes del café, comprometidos con la sostenibilidad y la excelencia, te invitamos a 
-        explorar y disfrutar de lo mejor del mundo este mundo. Haz de cada mañana una experiencia excepcional.
+        explorar y disfrutar de lo mejor de este mundo.
       </p>
     </div>
   )
