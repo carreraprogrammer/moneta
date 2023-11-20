@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
       <ul className={`navigation ${navActive ? 'navigationActive' : ''}`}>
         <NavLink className='navigationLinks' to='/' onClick={handleNavigation}>Principal</NavLink>
         <NavLink className='navigationLinks' to='/Coffee' onClick={handleNavigation}>Café</NavLink>
-        <NavLink className='navigationLinks' to='/Shop' onClick={handleNavigation}>Tienda</NavLink>
+        <NavLink className='navigationLinks' to='/shop' onClick={handleNavigation}>Tienda</NavLink>
         <NavLink className='navigationLinks' to='/About' onClick={handleNavigation}>About</NavLink>
         <video className='navVideo' autoPlay muted loop>
           <source src={mobileBg} type='video/webm' />
