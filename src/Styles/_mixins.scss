@@ -77,3 +77,10 @@
     border: 1px solid $sandy-brown-300;
   }
 }
+
+@mixin section-title {
+  color: $black-mate;
+  padding-bottom: 2%;
+  width: 80%;
+  border-bottom: 1px solid $black-mate;
+}
