@@ -6,16 +6,18 @@
   height: 70vh;
   width: 100%;
   background-color: $sandy-brown-300;
+  padding: 5% 0;
 
   .shopHeaderTitle {
     font-family: 'Lobster Two', coursive;
     font-size: 10rem;
+    font-weight: 400;
   }
 }
 
 @media (min-width: 1024px) {
   .shopHeader {
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     position:relative;
     padding: 5% 0;
