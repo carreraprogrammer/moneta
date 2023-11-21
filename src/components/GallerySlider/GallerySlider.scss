@@ -5,7 +5,6 @@
   @include center-row(flex-start);
   height: 250px;
   width: 300px;
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
   margin: 5% 0;
@@ -13,7 +12,6 @@
   .productContainer {
     height: 100%;
     min-width: 100%;
-    border: 1px solid blue;
     transition: all 0.5s ease-in-out;
   }
 
@@ -49,7 +47,7 @@
 
 @media (min-width: 768px) {
   .gallerySliderContainer {
-    height: 500px;
-    width: 600px;
+    min-height: 600px;
+    width: 800px;
   }
 }
