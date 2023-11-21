@@ -3,11 +3,14 @@ import './ProductsGrid.scss';
 import { products, Product } from '../../assets/Information/Ecommerce';
 import { useMobileScreen } from '../../customHooks/useIsMobile';
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
-import { fadeInAnimation } from '../../animations/animations';
+import { fadeInAnimation, incline, Animation } from '../../animations/animations';
 
 const ProductsGrid = () => {
   const isMobile = useMobileScreen();
   const productsRefArray: React.RefObject<HTMLDivElement>[] = [];
+  const inclineAnimation: Animation | any = () => {
+    if(isMobile) return incline;
+  }
 
   products.forEach(() => {
     const productRef = useRef<HTMLDivElement>(null);
@@ -15,7 +18,7 @@ const ProductsGrid = () => {
   });
 
   productsRefArray.forEach((productRef: RefObject<HTMLDivElement>) => {
-    useScrollTriggerAnimations(productRef, [fadeInAnimation]);
+    useScrollTriggerAnimations(productRef, [fadeInAnimation, inclineAnimation]);
   });
   
   return (
