@@ -29,7 +29,7 @@ export const rotateAnimation: Animation = {
 
 export const incline: Animation = {
   from: { rotate: 0 },
-  to: { rotate: 1 },
+  to: { rotate: 2 },
   options: { scrub: true, ease: 'linear', start: 'center center', end: 'bottom top', toggleActions: 'restart reverse reverse pause' }
 }
 
