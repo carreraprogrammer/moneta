@@ -10,7 +10,6 @@ const Header: React.FC = () => {
   const mLetter = useRef<HTMLSpanElement | null>(null);
   const onetaLetters = useRef<HTMLSpanElement | null>(null);
 
-  // Header animations
   const headerAnimations = [
     {
       from: { backgroundPosition: `${0}px` },
