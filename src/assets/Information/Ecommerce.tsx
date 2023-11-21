@@ -88,7 +88,7 @@ export const products: Product[] = [
     categoria: "Cafeteras",
     precio: 50.00,
     descuento: false,
-    porcentajeDescuento: 0,
+    porcentajeDescuento: 15,
     destacado: true,
     descripcion: "Vandola artesanal hecha a mano, perfecta para un café de filtro suave.",
     imagenMovil: mobileGridVandola,
