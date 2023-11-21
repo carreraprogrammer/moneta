@@ -27,6 +27,12 @@ export const rotateAnimation: Animation = {
   options: { scrub: true, start: 'top bottom', end: 'bottom top', toggleActions: "restart pause reverse pause"}
 };
 
+export const incline: Animation = {
+  from: { rotate: 0 },
+  to: { rotate: 1 },
+  options: { scrub: true, ease: 'linear', start: 'center center', end: 'bottom top', toggleActions: 'restart reverse reverse pause' }
+}
+
 export const fadeOut: Animation = {
   from: { opacity: 1 },
   to: { opacity: 0 },
@@ -79,4 +85,16 @@ export const moveImageUp: Animation = {
   from: { y: -50, opacity: 0 },
   to: { y: 0, opacity: 1 },
   options: { scrub: 1, start: 'top bottom', end: 'bottom top', toggleActions: "restart pause reverse pause"}
+};
+
+export const rotateWheel: Animation = {
+  from: { rotate: 0 },
+  to: { rotate: 500 },
+  options: { scrub: 3, ease: 'linear', start: 'center center', end: 'bottom top', toggleActions: 'restart pause reverse pause' }
+};
+
+export const moveXAnimation: Animation = {
+  from: { x: 0 },
+  to: { x: '30vw', y: '.2vh' },
+  options: { scrub: 3, ease: 'linear', start: 'center center', end: 'btoom top', toggleActions: 'restart pause reverse pause' }
 };
