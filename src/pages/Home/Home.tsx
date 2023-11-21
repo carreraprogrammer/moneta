@@ -4,7 +4,6 @@ import React from 'react';
 import Header from "../../section/Header/Header";
 import Gallery from "../../components/Gallery/Gallery";
 import Carousel from "../../components/Carousel/Carousel";
-import AboutAbstract from "../../section/AboutAbstract/AboutAbstract";
 import ShopHome from "../../section/ShopHome/ShopHome";
 import Events from "../../section/Events/Events";
 import Footer from "../../section/Footer/Footer";
