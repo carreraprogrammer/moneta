@@ -16,6 +16,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ category }) => {
               <div className='menuItem' key={index}>
                 <h3 className='menuItemTitle'>{item.name}</h3>
                 <p className='menuItemDescription'><span>{item.productInfo}</span><span>${item.price}</span></p>
+                <button className='addButton'>+</button>
               </div>
             ))}
           </div>
