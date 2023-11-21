@@ -1,13 +1,16 @@
 import React from 'react'
 import './ProductsGrid.scss'
+import { products, Product } from '../../assets/Information/Ecommerce'
+import { useMobileScreen } from '../../customHooks/useIsMobile'
 
 const ProductsGrid = () => {
-  const products = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  const isMobile = useMobileScreen()
+
   return (
     <div className='productsGridContainer'>
-      {products.map((product, index) => (
+      {products.map((product:Product, index) => (
         <div key={index} className='productContainer'>
-          {product}
+          <img src={isMobile ? product.imagenMovil : product.imagenPc} alt={product.nombre} className='productImage'/>
         </div>
       ))}
     </div>
