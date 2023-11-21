@@ -1,5 +1,54 @@
 @import '../../Styles/variables.scss';
 @import '../../Styles/mixins.scss';
+@import '../../Styles/animations.scss';
+
+#shopGallerySliderDiv {
+  height: auto;
+  width: auto;
+  position: relative;
+  margin: 5%;
+}
+
+.discountContainer {
+  @include center-column;
+  position: absolute;
+  z-index: 2;
+  top: -12px;
+  right: -24px;
+  cursor: pointer;
+
+  .discountText {
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    color: white;
+  }
+
+  .discountBtn {
+    z-index: -1;
+    height: 100px;
+    width: auto;
+
+    * {
+      fill: $bordeaux-600;
+    }
+  }
+
+  &:hover {
+    .discountBtn {
+      animation: rotate 5s infinite;
+      * {
+        fill: $bordeaux-700;
+      }
+    }
+
+    .discountText {
+      color: $sandy-brown-400;
+    }
+  }
+}
 
 .gallerySliderContainer {
   @include center-row(flex-start);
@@ -46,6 +95,16 @@
 }
 
 @media (min-width: 768px) {
+  .discountContainer {
+    .discountText {
+      font-size: 1.5rem;
+    }
+
+    .discountBtn {
+      height: 150px;
+    }
+  }
+
   .gallerySliderContainer {
     min-height: 600px;
     width: 800px;
