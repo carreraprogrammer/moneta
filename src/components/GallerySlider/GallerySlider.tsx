@@ -4,7 +4,7 @@ import { useMobileScreen } from '../../customHooks/useIsMobile';
 import { Product } from '../../assets/Information/Ecommerce';
 import { ReactComponent as DiscountBtn } from '../../assets/Images/shopHomeBtn.svg';
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
-import { rotateAnimation } from '../../animations/animations';
+import { rotateAnimation, fadeInAnimation } from '../../animations/animations';
 
 interface GallerySliderProps {
   products: Product[];
@@ -12,8 +12,10 @@ interface GallerySliderProps {
 
 const GallerySlider: React.FC<GallerySliderProps> = ({ products }) => {
   const discountBtnRef = useRef<SVGSVGElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   useScrollTriggerAnimations(discountBtnRef, [rotateAnimation]);
+  useScrollTriggerAnimations(galleryRef, [fadeInAnimation]);
 
   const [visibleProduct, setVisibleProduct] = useState<number>(0);
   const isMobile: boolean = useMobileScreen();
@@ -36,7 +38,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({ products }) => {
           </p>
           <DiscountBtn className='discountBtn' ref={discountBtnRef} />
       </div>
-      <div className='gallerySliderContainer'>
+      <div className='gallerySliderContainer' ref={galleryRef}>
         <div className='rightArrow' onClick={() => changeProduct('right')}></div>
         <div className='leftArrow' onClick={() => changeProduct('left')}></div>
         {featuredProducts.map((product:Product, index:number) => 
