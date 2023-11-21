@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
-import './App.css';
+import './App.scss';
 
 // Lazy loading de las páginas
 const Home = React.lazy(() => import("./pages/Home/Home"));
