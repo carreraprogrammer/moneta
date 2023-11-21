@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,400;1,700&family=Lobster+Two:wght@400;700&display=swap');
+@import './Styles/variables';
+/* RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* RESET */
+
+:root {
+  --yellow-background: #f4c382;
+}
+
+* {
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: $bordeaux-950 !important;
+  border-color: $bordeaux-950 !important;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+#root {
+  width: 100%;
+  background-color: #f4f5f0;
+  overflow-x: hidden;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  #root {
+    font-size: 18px;
+  }
+}
