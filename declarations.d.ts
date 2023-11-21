@@ -8,3 +8,4 @@ declare module '*.svg' {
   export default src;
 }
 declare module '*.webm'
+declare module '*.webp'
