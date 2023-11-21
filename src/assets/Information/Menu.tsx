@@ -23,6 +23,37 @@ export type MenuTypo = Partial<{
 
 
 const menu:MenuTypo = {
+  Acompañamientos: {
+    subCategories: [
+      {
+        name: 'Hojaldre',
+        products: [
+          { name: 'Pastel de pollo', productInfo: '', price: 4000, image: '' },
+          { name: 'Dedo de queso', productInfo: '', price: 4000, image: '' },
+          { name: 'Rollito de canela, frutos rojos o chocolate', productInfo: '', price: 4000, image: '' },
+          { name: 'Cruffin', productInfo: '', price: 4000, image: '' },
+          { name: 'Cruffin', productInfo: 'Queso con albahca, Vainilla con chocolate', price: 4000, image: '' }
+        ]
+      },
+      {
+        name: 'Pastelería',
+        products: [
+          { name: 'Porcion de torta', productInfo: '', price: 6000, image: '' },
+          { name: 'Torta sin gluten', productInfo: '', price: 6500, image: '' },
+          { name: 'Porcion de galletas', productInfo: '', price: 4800, image: '' }
+        ]
+      },
+      {
+        name: 'Tradicionales',
+        products: [
+          { name: 'Brocheta', productInfo: 'Pan de quinoa, pepino encurtido, tomates secos y salsa de ajo', price: 11000, image: '' },
+          { name: 'Quimbolate', productInfo: '', price: 3500, image: '' },
+          { name: 'Envuelto de choclo', productInfo: '', price: 2500, image: '' },
+          { name: 'Envuelto de choclo', productInfo: '', price: 3500, image: '' }
+        ]
+      }
+    ]
+  },
   Bebidas: {
     subCategories: [
       {
@@ -100,37 +131,6 @@ const menu:MenuTypo = {
           { name: 'Hervido de frutas', productInfo: 'Frutos rojos, lulo con uchuva, maracuyá', price: 11000, image: '' },
           { name: 'Canelazo moneta', productInfo: '', price: 9500, image: '' },
           { name: 'Cerveza artesanal', productInfo: '', price: 11000, image: '' }
-        ]
-      }
-    ]
-  },
-  Acompañamientos: {
-    subCategories: [
-      {
-        name: 'Hojaldre',
-        products: [
-          { name: 'Pastel de pollo', productInfo: '', price: 4000, image: '' },
-          { name: 'Dedo de queso', productInfo: '', price: 4000, image: '' },
-          { name: 'Rollito de canela, frutos rojos o chocolate', productInfo: '', price: 4000, image: '' },
-          { name: 'Cruffin', productInfo: '', price: 4000, image: '' },
-          { name: 'Cruffin', productInfo: 'Queso con albahca, Vainilla con chocolate', price: 4000, image: '' }
-        ]
-      },
-      {
-        name: 'Pastelería',
-        products: [
-          { name: 'Porcion de torta', productInfo: '', price: 6000, image: '' },
-          { name: 'Torta sin gluten', productInfo: '', price: 6500, image: '' },
-          { name: 'Porcion de galletas', productInfo: '', price: 4800, image: '' }
-        ]
-      },
-      {
-        name: 'Tradicionales',
-        products: [
-          { name: 'Brocheta', productInfo: 'Pan de quinoa, pepino encurtido, tomates secos y salsa de ajo', price: 11000, image: '' },
-          { name: 'Quimbolate', productInfo: '', price: 3500, image: '' },
-          { name: 'Envuelto de choclo', productInfo: '', price: 2500, image: '' },
-          { name: 'Envuelto de choclo', productInfo: '', price: 3500, image: '' }
         ]
       }
     ]
