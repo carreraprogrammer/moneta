@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import './GallerySlider.scss';
+import { useMobileScreen } from '../../customHooks/useIsMobile';
+import { Product } from '../../assets/Information/Ecommerce';
 
-const GallerySlider: React.FC = () => {
+interface GallerySliderProps {
+  products: Product[];
+}
+
+const GallerySlider: React.FC<GallerySliderProps> = ({ products }) => {
   const [visibleProduct, setVisibleProduct] = useState<number>(0);
-  const products: number[] = [0, 1, 2, 3];
+  const isMobile: boolean = useMobileScreen();
+  const featuredProducts = products.filter((product:Product) => product.destacado);
 
   const changeProduct = (direction: 'left' | 'right') => {
     let newVisibleProduct = direction === 'right'
-      ? Math.min(visibleProduct + 1, products.length - 1)
+      ? Math.min(visibleProduct + 1, featuredProducts.length - 1)
       : Math.max(visibleProduct - 1, 0);
     if (newVisibleProduct !== visibleProduct) {
       setVisibleProduct(newVisibleProduct);
@@ -18,20 +25,15 @@ const GallerySlider: React.FC = () => {
     <div className='gallerySliderContainer'>
       <div className='rightArrow' onClick={() => changeProduct('right')}></div>
       <div className='leftArrow' onClick={() => changeProduct('left')}></div>
-      {products.map((product, index) => (
+      {featuredProducts.map((product:Product, index:number) => 
         <div 
           key={index} 
           className='productContainer'
           style={{ transform: `translateX(-${visibleProduct * 100}%)` }}
         >
-          <div className='productImage'></div>
-          <div className='productInfo'>
-            <h2 className='productName'>Nombre del producto {product}</h2>
-            <p className='productDescription'>Descripción del producto</p>
-            <p className='productPrice'>$100</p>
-          </div>
+          <img src={isMobile ? product.imagenDestacadaMovil : product.imagenDestacadaPc} alt={product.nombre} className='productImage'/>
         </div>
-      ))}
+      )}
     </div>
   );
 };
