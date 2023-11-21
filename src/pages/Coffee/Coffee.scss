@@ -25,7 +25,8 @@
     height: 40vh;
 
     img {
-      height: 100%;
+      height: 250px;
+      width: 300px;
     }
   }
 }
@@ -38,7 +39,6 @@
 
 #coffeeHeaderDescription {
   width: 80%;
-  font-size: 1.5rem;
   font-family: 'Lato', sans-serif;
   text-align: center;
 }
@@ -62,13 +62,13 @@
     
       #coffeeGalleryOne {
         border: 1px solid white;
-        width: 50vw;
+        width: auto;
         overflow: hidden;
         height: auto;
     
         img {
-          height: auto;
-          width: 100%;
+          height: 400px;
+          width: 500px;
         }
       }
     }
