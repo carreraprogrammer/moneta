@@ -4,7 +4,7 @@ import { ReactComponent as ShopBtn } from '../../assets/Images/shopHomeBtn.svg';
 import shopArticles from '../../assets/Images/shopArticles.png';
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
 import { fadeInAnimation, rotateAnimation, unveilImageAnimation } from '../../animations/animations';
-import './ShopHome.scss';// Asegúrate de que la ruta sea correcta
+import './ShopHome.scss';
 
 const ShopHome: React.FC = () => {
   // Refs for each element
