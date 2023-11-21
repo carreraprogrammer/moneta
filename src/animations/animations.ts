@@ -17,8 +17,8 @@ export interface Animation {
 
 export const fadeInAnimation: Animation = {
   from: { opacity: 0, y: -30 },
-  to: { opacity: 1, y: 0 },
-  options: { duration: 1, toggleActions: "restart pause pause pause", start: "top bottom"}
+  to: { opacity: 1, y: 0, duration: 2 },
+  options: { toggleActions: "restart pause pause pause", start: "30% bottom"}
 };
 
 export const rotateAnimation: Animation = {
