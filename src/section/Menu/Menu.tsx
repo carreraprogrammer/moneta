@@ -8,10 +8,12 @@ type MenuKey = keyof MenuTypo;
 
 const Menu: React.FC = () => {
   const [menuData, setMenuData] = useState<MenuTypo>(menu);
+  const [visibleSections, setVisibleSections] = useState(1);
 
   const filterMenu = (category: string) => {
     const newMenuData = category === 'Todos' ? menu : { [category]: menu[category as MenuKey] };
     setMenuData(newMenuData);
+    setVisibleSections(1); 
   };
 
   const filterMenuSubcategory = (subcategory: string) => {
@@ -25,11 +27,13 @@ const Menu: React.FC = () => {
 
   const renderMenuFilters = () => (
     <div id='menuFilters'>
-      <p><b>Filtrar Categorias: </b></p>
-      <button className='menuFilter' onClick={() => filterMenu('Todos')}>Todos</button>
-      {Object.keys(menu).map(key => (
-        <button key={key} className='menuFilter' onClick={() => filterMenu(key)}>{key}</button>
-      ))}
+      <p><b>'Filtrar Categorias: '</b></p>
+      <div className='buttonsContainer'>
+        <button className='menuFilter' onClick={() => filterMenu('Todos')}>Todos</button>
+        {Object.keys(menu).map(key => (
+          <button key={key} className='menuFilter' onClick={() => filterMenu(key)}>{key}</button>
+        ))}
+      </div>
     </div>
   );
 
@@ -37,18 +41,47 @@ const Menu: React.FC = () => {
     if (Object.keys(menuData).length === 1) {
       return (
         <div className='menuSubFilters'>
-          <p><b>Filtrar Subategorias: </b></p>
+          <p><b>Filtrar Subcategorias: </b></p>
           {(menuData[Object.keys(menuData)[0] as MenuKey] as Category).subCategories.map((subCategory, index) => (
             <button key={index} className='menuSubFilter' onClick={() => filterMenuSubcategory(subCategory.name)}>{subCategory.name}</button>
           ))}
+          <i className="fa-solid fa-filter-circle-xmark" onClick={() => filterMenu('Todos')}></i>
         </div>
       );
     }
     return null;
   };
 
+  const showMoreSections = () => {
+    const totalSections = Object.keys(menuData).length;
+    if (visibleSections < totalSections) {
+      setVisibleSections(visibleSections + 1);
+    }
+  };
+
+  const showLessSections = () => {
+    if (visibleSections > 1) {
+      setVisibleSections(visibleSections - 1);
+    }
+  };
+
+  const renderShowMoreButton = () => {
+    const totalSections = Object.keys(menuData).length;
+    if (visibleSections < totalSections) {
+      return <button onClick={showMoreSections}>Mostrar más secciones</button>;
+    }
+    return null;
+  };
+
+  const renderShowLessButton = () => {
+    if (visibleSections >= 2) {
+      return <button onClick={showLessSections}>Mostrar menos</button>;
+    }
+    return null;
+  };
+
   const renderMenuSections = () => (
-    Object.keys(menuData).map(key => (
+    Object.keys(menuData).slice(0, visibleSections).map(key => (
       <div key={key} className='sectionContainer'>
         <h2 className='sectionTitle'>{key}</h2>
         <MenuCard category={menuData[key as MenuKey] as Category} />
@@ -63,6 +96,10 @@ const Menu: React.FC = () => {
       {renderMenuSubcategoryFilters()}
       <div id='menuContainer'>
         {renderMenuSections()}
+        <div className='buttonsContainer'>
+          {renderShowMoreButton()}
+          {renderShowLessButton()}
+        </div>
       </div>
     </div>
   );
