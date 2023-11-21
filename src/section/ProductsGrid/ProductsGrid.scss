@@ -1,24 +1,40 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
 .productsGridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin: 24px;
   gap: 24px;
 
   .productContainer {
     height: 250px;
-    width: 100%;
-    border: 1px solid black;
+    width: 350px;
+    justify-self: center;
   }
 }
 
 @media (min-width: 1025px) {
   .productsGridContainer {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-gap: 10px;
 
     .productContainer {
-      height: 500px;
-      width: 100%;
-      border: 1px solid black;
+        @include center-column;
+        height: 500px;
+        width: auto;
+        justify-self: center;
+        margin: 24px;
+
+        img {
+          justify-self: center;
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+          cursor: pointer;
+        }
     }
   }
 }
