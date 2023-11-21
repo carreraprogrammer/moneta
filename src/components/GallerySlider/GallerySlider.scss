@@ -67,7 +67,7 @@
   .rightArrow,
   .leftArrow {
     height: 25px;
-    border-top: 1px solid black;
+    border-top: 3px solid $bordeaux-500;
     width: 25px;
     position: absolute;
     cursor: pointer;
@@ -83,14 +83,14 @@
     right: 12px;
     align-self: center;
     transform: rotate(45deg);
-    border-right: 1px solid black;
+    border-right: 3px solid $bordeaux-500;
   }
 
   .leftArrow {
     left: 12px;
     align-self: center;
     transform: rotate(-45deg);
-    border-left: 1px solid black;
+    border-left: 3px solid $bordeaux-500;
   }
 }
 
