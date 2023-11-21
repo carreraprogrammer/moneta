@@ -13,8 +13,8 @@ const Header: React.FC = () => {
   // Header animations
   const headerAnimations = [
     {
-      from: { backgroundPosition: `center ${0}px` },
-      to: { backgroundPosition: `center ${100}px` },
+      from: { backgroundPosition: `${0}px` },
+      to: { backgroundPosition: `${400}px` },
       options: { scrub: true, trigger: headerRef.current, start: "70% center", end: "bottom center" }
     }
   ];
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
   const leavesAnimations = [
     {
       from: { yPercent: 0, opacity: 0 },
-      to: { opacity: 1, yPercent: 40 },
+      to: { opacity: 1, yPercent: 60 },
       options: { scrub: 3, trigger: leavesRef.current, start: "bottom center", toggleActions: "play none none none" }
     }
   ];
