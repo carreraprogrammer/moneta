@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import menu from '../../assets/Information/Menu';
 import './Menu.scss';
 import MenuCard from '../../components/MenuCard/MenuCard';
 import { MenuTypo, Category } from '../../assets/Information/Menu';
+import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
+import { imageFlipIn } from '../../animations/animations';
 
 type MenuKey = keyof MenuTypo;
 
 const Menu: React.FC = () => {
+  const menuSectionRef = useRef<HTMLDivElement>(null);
   const [menuData, setMenuData] = useState<MenuTypo>(menu);
   const [visibleSections, setVisibleSections] = useState(1);
+
+  useScrollTriggerAnimations(menuSectionRef, [imageFlipIn]);
 
   const filterMenu = (category: string) => {
     const newMenuData = category === 'Todos' ? menu : { [category]: menu[category as MenuKey] };
@@ -82,7 +87,7 @@ const Menu: React.FC = () => {
 
   const renderMenuSections = () => (
     Object.keys(menuData).slice(0, visibleSections).map(key => (
-      <div key={key} className='sectionContainer'>
+      <div key={key} className='sectionContainer' ref={menuSectionRef}>
         <h2 className='sectionTitle'>{key}</h2>
         <MenuCard category={menuData[key as MenuKey] as Category} />
       </div>
@@ -97,8 +102,8 @@ const Menu: React.FC = () => {
       <div id='menuContainer'>
         {renderMenuSections()}
         <div className='buttonsContainer'>
-          {renderShowMoreButton()}
           {renderShowLessButton()}
+          {renderShowMoreButton()}
         </div>
       </div>
     </div>
