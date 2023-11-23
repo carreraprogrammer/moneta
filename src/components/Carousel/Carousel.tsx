@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { NavLink } from 'react-router-dom';
 import './Carousel.scss'
 import carousel from '../../assets/Images/carouselOne.png'
-import sandwich from '../../assets/Images/carouselSandwich.png'
+import sandwich from '../../assets/Images/carouselSandwich.webp'
 import { ReactComponent as CoffeeBeans } from '../../assets/Images/coffee_beans.svg'
 import useScrollTriggerAnimations from '../../customHooks/useScrollTriggerAnimations';
 import { useMobileScreen } from '../../customHooks/useIsMobile';
