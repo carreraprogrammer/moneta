@@ -37,7 +37,8 @@
 @media (min-width: 768px) {
   .header {
     height: 100vh;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 110% !important;
     background: $header-background-image;
 
     #headerTitle {
