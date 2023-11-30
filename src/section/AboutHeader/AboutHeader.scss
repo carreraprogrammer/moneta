@@ -1,0 +1,36 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
+.aboutHeader {
+  @include center-column;
+  height: 70vh;
+  width: 100%;
+  background-color: $sandy-brown-300;
+  padding: 5% 0;
+
+  .aboutHeaderTitle {
+    font-family: 'Lobster Two', coursive;
+    font-size: 10rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutHeader {
+    height: 80vh;
+    width: 100%;
+    position:relative;
+    padding: 5% 0;
+    @include center-column;
+
+    .aboutHeaderTitle {
+      font-size: 15rem;
+    }
+
+    .aboutHeaderDescription {
+      width: 80%;
+      margin: 2% 0;
+      text-align: center;
+    }
+  }
+}
