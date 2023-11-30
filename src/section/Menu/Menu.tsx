@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
 
   const renderMenuFilters = () => (
     <div id='menuFilters'>
-      <p><b>'Filtrar Categorias: '</b></p>
+      <p><b>Filtrar Categorias: </b></p>
       <div className='buttonsContainer'>
         <button className='menuFilter' onClick={() => filterMenu('Todos')}>Todos</button>
         {Object.keys(menu).map(key => (
