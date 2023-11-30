@@ -20,7 +20,7 @@ nav {
   align-items: center;
   padding: 0 15px;
   position: fixed;
-  background-color: $sandy-brown-500;
+  background-color: $bordeaux-700;
   z-index: 1100;
   transition: all .5s ease-in-out;
 }
@@ -116,6 +116,10 @@ nav {
     background-size: 50%;
     padding: 0;
     height: 10vh;
+    
+    .navigation {
+      top: 0;
+    }
   }
 
   .navigationLinks {
