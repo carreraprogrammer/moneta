@@ -45,13 +45,14 @@
           animation: rotate 5s infinite;
           
           * {
-            fill: $bordeaux-800;
+            fill: $bordeaux-700;
           }
         }
 
         #shopBtnText {
           transform: scale(1.1);
-          color: $sandy-brown-400;
+          font-size: 1.5rem;
+          font-weight: bolder;
         }
       }
     
