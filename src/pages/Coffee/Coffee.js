@@ -5,7 +5,10 @@ import Contact from '../../section/Contact/Contact'
 import Footer from '../../section/Footer/Footer'
 import ShoppingListButton from '../../components/ShoppingListButton/ShoppingListButton'
 
+import useScrollToTop from '../../customHooks/useScrollToTop'
+
 const Coffee = () => {
+useScrollToTop()
 
   return(
     <>
