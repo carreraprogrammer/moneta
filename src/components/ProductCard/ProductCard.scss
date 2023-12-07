@@ -5,24 +5,64 @@
   height: 250px;
   width: 350px;
   justify-self: center;
+  position: relative;
+
+  img {
+    justify-self: center;
+  }
+
+  .productName {
+    font-weight: bold;
+  }
+
+  .productOptions {
+    @include center-row(space-around);
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.534);
+    z-index: 1;
+    color: white;
+    
+    .buttonsContainer {
+      button {
+        border-radius: 100%;
+        padding: 5px;
+        margin: 12px;
+        border: none;
+        background-color: rgba(128, 128, 128, 0.529);
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $black-mate;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1025px) {
   .productContainer {
     @include center-column;
-    height: 500px;
-    width: auto;
     justify-self: center;
     margin: 24px;
+    height: 500px;
+    width: auto;
 
     img {
       justify-self: center;
     }
 
     &:hover {
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.516);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.118);
       cursor: pointer;
       transform: rotate(1deg);
+    }
+
+    .productOptions {
+      width: 100%;
     }
   }
 

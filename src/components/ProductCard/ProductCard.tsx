@@ -15,6 +15,13 @@ const ProductCard: React.FC<ProductProps> = ({ product, isMobile, ref }) => {
   return (
     <div className='productContainer' ref={ref}>
       <img src={isMobile ? product.imagenMovil : product.imagenPc} alt={product.nombre} className='productImage'/>
+      <div className='productOptions'>
+        <p className='productName'>{product.nombre}</p>
+        <div className='buttonsContainer'>
+          <button className='seeMoreButton'><i className="fa-solid fa-eye"></i></button>
+          <button className='addToCartButton'><i className="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
     </div>
   );
 };
