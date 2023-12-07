@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import React, { forwardRef } from 'react';
 import './ProductCard.scss';
 
 interface ProductProps {
@@ -8,10 +8,9 @@ interface ProductProps {
     imagenPc: string;
   };
   isMobile: boolean;
-  ref: RefObject<HTMLDivElement>;
 }
 
-const ProductCard: React.FC<ProductProps> = ({ product, isMobile, ref }) => {
+const ProductCard = forwardRef<HTMLDivElement, ProductProps>(({ product, isMobile }, ref) => {
   return (
     <div className='productContainer' ref={ref}>
       <img src={isMobile ? product.imagenMovil : product.imagenPc} alt={product.nombre} className='productImage'/>
@@ -24,6 +23,6 @@ const ProductCard: React.FC<ProductProps> = ({ product, isMobile, ref }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProductCard;
