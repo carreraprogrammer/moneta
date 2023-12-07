@@ -8,11 +8,19 @@ import { Animation, incline, rotateWheel, moveXAnimation } from '../../animation
 const Events: React.FC = () => {
   const coffeeWheelRef = useRef<HTMLButtonElement | null>(null);
   const title = useRef<HTMLHeadingElement | null>(null);
+  const imagesContainer = useRef<HTMLDivElement | null>(null);
 
   const wheelAnimations: Animation[] = [rotateWheel, moveXAnimation];
+  const galleryAnimation: Animation | any = {
+    from: { x: '-100%'},
+    to: { x: '0%'},
+    options: { scrub: true, trigger: '#eventsHome', start: '-100% bottom', end: 'center center'}
+  }
+
 
   useScrollTriggerAnimations(coffeeWheelRef, wheelAnimations);
   useScrollTriggerAnimations(title, [incline]);
+  useScrollTriggerAnimations(imagesContainer, [galleryAnimation]);
 
   return (
     <div id='eventsHome'>
@@ -22,9 +30,14 @@ const Events: React.FC = () => {
       </button>
 
       <div id='eventsGallery'>
-        <img src={event} alt='event' />
-        <img src={event} alt='event' />
-        <img src={event} alt='event' />
+        <div id='eventsImagesContainer' ref={imagesContainer}>
+          <img src={event} alt='event' />
+          <img src={event} alt='event' />
+          <img src={event} alt='event' />
+          <img src={event} alt='event' />
+          <img src={event} alt='event' />
+          <img src={event} alt='event' />
+        </div>
       </div>
     </div>
   );

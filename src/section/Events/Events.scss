@@ -53,14 +53,19 @@
     }
 
     #eventsGallery {
-      @include center-row;
+      @include center-row(flex-start);
       height: 50vh;
       margin: auto;
       width: 80%;
 
-      img {
-        height: 90%;
-        margin: 24px;
+      #eventsImagesContainer {
+       @include center-row(flex-start);
+       height: 100%;
+
+       img {
+        height: 100%;
+        margin: 0 24px;
+       }
       }
     }
   }
