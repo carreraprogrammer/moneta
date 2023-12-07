@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
 
   const renderMenuFilters = () => (
     <div id='menuFilters'>
-      <p><b>Filtrar Categorias: </b></p>
+      <p><b>Filtrar Categorias </b></p>
       <div className='buttonsContainer'>
         <button className='menuFilter' onClick={() => filterMenu('Todos')}>Todos</button>
         {Object.keys(menu).map(key => (
@@ -46,7 +46,7 @@ const Menu: React.FC = () => {
     if (Object.keys(menuData).length === 1) {
       return (
         <div className='menuSubFilters'>
-          <p><b>Filtrar Subcategorias: </b></p>
+          <p><b>Filtrar Subcategorias </b></p>
           <div className='buttonsContainer'>
             {(menuData[Object.keys(menuData)[0] as MenuKey] as Category).subCategories.map((subCategory, index) => (
               <button key={index} className='menuSubFilter' onClick={() => filterMenuSubcategory(subCategory.name)}>{subCategory.name}</button>

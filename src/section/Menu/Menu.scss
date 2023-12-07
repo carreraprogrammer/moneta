@@ -169,6 +169,19 @@
 
 @media (min-width: 1025px) {
   #menu {
+
+    #menuFilters {
+      .buttonsContainer {
+        @include center-row;
+        width: 50%;
+        overflow: hidden;
+      }
+    }
+
+    #meenuSubFilters {
+
+    }
+
     #menuContainer {
       .sectionContainer {
         .menuSection {
