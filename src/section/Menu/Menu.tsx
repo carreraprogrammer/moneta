@@ -47,10 +47,12 @@ const Menu: React.FC = () => {
       return (
         <div className='menuSubFilters'>
           <p><b>Filtrar Subcategorias: </b></p>
-          {(menuData[Object.keys(menuData)[0] as MenuKey] as Category).subCategories.map((subCategory, index) => (
-            <button key={index} className='menuSubFilter' onClick={() => filterMenuSubcategory(subCategory.name)}>{subCategory.name}</button>
-          ))}
-          <i className="fa-solid fa-filter-circle-xmark" onClick={() => filterMenu('Todos')}></i>
+          <div className='buttonsContainer'>
+            {(menuData[Object.keys(menuData)[0] as MenuKey] as Category).subCategories.map((subCategory, index) => (
+              <button key={index} className='menuSubFilter' onClick={() => filterMenuSubcategory(subCategory.name)}>{subCategory.name}</button>
+            ))}
+            <i className="fa-solid fa-filter-circle-xmark" onClick={() => filterMenu('Todos')}></i>
+          </div>
         </div>
       );
     }

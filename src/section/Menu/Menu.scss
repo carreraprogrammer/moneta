@@ -22,12 +22,12 @@
   #menuFilters {
     @include center-column;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
 
     .buttonsContainer {
-      @include center-row;
-      flex-wrap: wrap;
+      @include center-row(flex-start);
       width: 100%;
+      overflow-x: scroll;
 
       .menuFilter {
         padding: 5px;
@@ -45,8 +45,12 @@
   }
 
   .menuSubFilters {
-    @include center-row;
+    @include center-column;
     flex-wrap: wrap;
+
+    .buttonsContainer {
+      @include center-row;
+    }
 
     .fa-filter-circle-xmark {
       font-size: 1rem;
