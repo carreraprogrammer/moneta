@@ -37,7 +37,7 @@ const menu: MenuTypo = {
         ]
       },
       {
-        name: 'Pastelería',
+        name: 'Pastelería', 
         products: [
           { name: 'Porcion de torta', productInfo: 'Porción generosa de nuestra torta casera', price: 6000, image: '' },
           { name: 'Torta sin gluten', productInfo: 'Deliciosa torta apta para celíacos', price: 6500, image: '' },
