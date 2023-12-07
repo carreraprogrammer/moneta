@@ -44,7 +44,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({ products }) => {
         {featuredProducts.map((product:Product, index:number) => 
           <div 
             key={index} 
-            className='productContainer'
+            className='featuredProductContainer'
             style={{ transform: `translateX(-${visibleProduct * 100}%)` }}
           >
             <img src={isMobile ? product.imagenDestacadaMovil : product.imagenDestacadaPc} alt={product.nombre} className='productImage'/>
